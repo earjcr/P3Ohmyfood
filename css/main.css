@@ -5,40 +5,40 @@
 }
 
 body {
-  background: #272727;
-  color: #fff;
-  font-weight: 700;
+  font-weight: 400;
+}
+
+header {
+  font-family: shrikhand;
+  color: black;
+  background: white;
+}
+
+nav {
+  color: black;
+  background: white;
+}
+
+section {
+  color: black;
+  background: white;
+}
+
+footer {
+  color: black;
+  background: white;
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   width: 80%;
   margin: 0 auto;
 }
 
-.main .main__paragraph1, .main .main__paragraph2 {
-  font-weight: 700;
+.main .main__paragraph1 {
+  font-weight: 400;
 }
 
-.main .main__paragraph1:hover, .main .main__paragraph2:hover {
-  color: pink;
-}
-
-.main .main__paragraph2:hover {
-  color: #ff652f;
-}
-
-@media (max-width: 800px) {
-  .main {
-    flex-direction: column;
-  }
-}
-
-.light {
-  background: white;
-  color: black;
+.main .main__paragraph1:hover {
+  color: yellow;
 }
 /*# sourceMappingURL=main.css.map */
