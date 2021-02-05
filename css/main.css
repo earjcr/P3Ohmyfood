@@ -5,13 +5,16 @@
 }
 
 body {
-  font-weight: 400;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  font-family: shrikhand;
+  font-family: Roboto;
   color: black;
   background: white;
+  text-align: center;
 }
 
 nav {
@@ -26,19 +29,170 @@ section {
 
 footer {
   color: black;
-  background: white;
+  background: grey;
 }
 
-.main {
-  width: 80%;
-  margin: 0 auto;
+.title {
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 60px 200px 60px;
 }
 
-.main .main__paragraph1 {
-  font-weight: 400;
+.title__left {
+  color: white;
+  background-color: white;
+  border: none;
 }
 
-.main .main__paragraph1:hover {
-  color: yellow;
+.title__text {
+  font-family: Shrikhand;
+  font-size: 1.5em;
+}
+
+.title__right {
+  color: white;
+  background-color: white;
+  border: none;
+}
+
+.navbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*INSTALL QUERY >680px*/
+  justify-content: center;
+  font-family: Roboto;
+  background-color: white;
+}
+
+.navbox__text {
+  display: inline;
+  justify-content: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  height: 300px;
+  width: 320px;
+}
+
+.navbox__text__loc {
+  height: 50px;
+  width: 320px;
+  border: 0px;
+  background-color: grey;
+}
+
+.navbox__text__text1 {
+  font-size: 1.2em;
+  font-weight: 900;
+  height: 60px;
+  padding: 25px;
+}
+
+.navbox__text__text2 {
+  font-size: 1.0em;
+  height: 60px;
+  padding: 25px 25px 80px 25px;
+}
+
+.navbox__text__explore {
+  font-size: 1.0em;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background-color: #9356DC;
+}
+
+.navbox__text__explore:hover {
+  background-color: greenyellow;
+}
+
+.navbox__method {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 400px;
+  min-width: 320px;
+}
+
+.navbox__method__text {
+  height: 60px;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.navbox__method__steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+  grid-gap: 10px;
+}
+
+.navbox__method__steps__1, .navbox__method__steps__2, .navbox__method__steps__3 {
+  width: 250px;
+  height: 50px;
+  border: none;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+}
+
+.navbox__method__steps__1:hover, .navbox__method__steps__2:hover, .navbox__method__steps__3:hover {
+  background-color: greenyellow;
+}
+
+.eatery {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  background-color: #f2f2f2;
+}
+
+.eatery__box {
+  max-width: 1400px;
+  min-width: 375;
+}
+
+.eatery__box__rest {
+  background-color: white;
+  border-radius: 15px;
+}
+
+.eatery__box__rest__btn {
+  border-color: white;
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.eatery__box__rest__btn__pic {
+  width: 320px;
+  /* width of container */
+  height: 200px;
+  /* height of container */
+  object-fit: cover;
+  object-position: 30% 30%;
+  /* try 20px 10px */
+  float: inline-start;
+  padding: 5px;
+  border-radius: 15px 15px 0 0;
+}
+
+.eatery__box__rest__btn__txt {
+  text-align: left;
+  font-size: 1.2em;
+  margin-left: 0px;
+  height: 15;
+  padding: 5px;
+  border-radius: 0 0 15px 15px;
 }
 /*# sourceMappingURL=main.css.map */

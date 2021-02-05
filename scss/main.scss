@@ -3,50 +3,165 @@
 
 
 body {
-    font-weight: map-get($font-weights, regular);
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }   
 header {
-    font-family: $title-fontfamily;
+    font-family: Roboto;
     color: $textcolor;
-    background: blue; /*$backgroundcolor;*/
+    background: $backgroundcolor1;
     text-align: center;
-}
-.title {
-    color: $text-color;
-    background-color: $backgroundcolor;
-    font-family: $title-fontfamily;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 32px;
-
-}
-.headbox {
-    background-color: $text-color3;
-
 }
 nav {
     color: $textcolor;
-    background: $backgroundcolor;
+    background: $backgroundcolor1;
 }
 section {
     color: $textcolor;
-    background: $backgroundcolor;
+    background: $backgroundcolor1;
 }
 footer {
     color: $textcolor;
-    background: $backgroundcolor;
+    background: $backgroundcolor3;
+}
+.title {
+    color: $textcolor;
+    background-color: $backgroundcolor1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 60px 200px 60px;
+    &__left {
+        color: white;
+        background-color: $backgroundcolor1;
+        border: none;        
+    }
+    &__text {
+        font-family: Shrikhand;
+        font-size: $fontsize2;
+    }
+    &__right {
+        color: white;
+        background-color: $backgroundcolor1;
+        border: none;        
+    }
 }
 
-.main {
-    width: 80%;
-    margin: 0 auto;
-    
-    #{&}__paragraph1 {
-        font-weight: map-get($font-weights, regular);
+.navbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*INSTALL QUERY >680px*/
+    justify-content: center;
+    font-family: Roboto;
+    background-color: $backgroundcolor1;
+    &__text {
+        display: inline;
+        justify-content: center;
+        text-align: center;
+        background-color: $backgroundcolor2;
+        height: 300px;
+        width: 320px;
+            &__loc {
+            height: 50px;
+            width: 320px;
+            border: 0px;
+            background-color: $backgroundcolor3;
+        }
+        &__text1 {
+            font-size: 1.2em;
+            font-weight: 900;
+            height: 60px;
+            padding: 25px;
+        }
+        &__text2 {
+            font-size: 1.0em;
+            height: 60px;
+            padding: 25px 25px 80px 25px;
+        }
+        &__explore {
+            font-size: 1.0em;
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            color: white;
+            background-color: $primary-color;
+            &:hover {
+                background-color: greenyellow;
+            }
+        }
+    }
+    &__method {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        max-height: 400px;
+        min-width: 320px;
+        &__text {
+            height: 60px;
+            font-size: $fontsize2;
+            padding: 10px;
+        }
+        &__steps {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+            grid-gap: 10px;
+            &__1, &__2, &__3 {
+                width: 250px;
+                height: 50px;
+                border: none;
+                padding: 20px;
+                border-radius: 25px;
+                background-color: $backgroundcolor2;
+                &:hover {
+                    background-color: greenyellow;
+                }
+            }
+        }
+    }
+}
 
-        &:hover {
-            color: yellow;
+.eatery {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    background-color: $backgroundcolor2;
+    &__box {
+        max-width: 1400px;
+        min-width: 375;
+        &__rest {
+            background-color: white;
+            border-radius: 15px;
+            &__btn {
+                border-color: white;
+                border: none;
+                background-color: white;
+                border-radius: 15px;
+                &__pic {
+                    width: 320px; /* width of container */
+                    height:200px; /* height of container */
+                    object-fit: cover;
+                    object-position: 30% 30%; /* try 20px 10px */ 
+                    float: inline-start;
+                    padding: 5px;
+                    border-radius: 15px 15px 0 0;
+                }
+                &__txt {
+                    text-align: left;
+                    font-size: 1.2em;
+                    margin-left: 0px;
+                    height: 15;
+                    padding: 5px;
+                    border-radius: 0 0 15px 15px;
+                }
+            }
         }
     }
 }
