@@ -19,11 +19,11 @@ nav {
 }
 section {
     color: $textcolor;
-    background: $backgroundcolor1;
+    background: $backgroundcolor2;
 }
 footer {
     color: $textcolor;
-    background: $backgroundcolor3;
+    background-color: $backgroundcolor4;
 }
 .title {
     color: $textcolor;
@@ -54,12 +54,13 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /*INSTALL QUERY >680px*/
+    justify-content: space-around;
     justify-content: center;
     font-family: Roboto;
     background-color: $backgroundcolor1;
     &__text {
         display: inline;
-        justify-content: center;
+        justify-content: space-around;
         text-align: center;
         background-color: $backgroundcolor2;
         height: 300px;
@@ -116,6 +117,7 @@ footer {
             &__1, &__2, &__3 {
                 width: 250px;
                 height: 50px;
+                font-size: .8em;
                 border: none;
                 padding: 20px;
                 border-radius: 25px;
@@ -128,41 +130,87 @@ footer {
     }
 }
 
+.sectiontitle {
+    min-width: 320px;
+    height: 30px;
+    font-weight: 900;
+    padding: 10px;
+}
 .eatery {
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 10px;
-    background-color: $backgroundcolor2;
+    justify-content: center;
     &__box {
-        max-width: 1400px;
-        min-width: 375;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+    
         &__rest {
+            border: none;
             background-color: white;
+            width: 280px;
+            height: 250px;
             border-radius: 15px;
-            &__btn {
-                border-color: white;
-                border: none;
-                background-color: white;
-                border-radius: 15px;
-                &__pic {
-                    width: 320px; /* width of container */
-                    height:200px; /* height of container */
-                    object-fit: cover;
-                    object-position: 30% 30%; /* try 20px 10px */ 
-                    float: inline-start;
-                    padding: 5px;
-                    border-radius: 15px 15px 0 0;
-                }
-                &__txt {
-                    text-align: left;
-                    font-size: 1.2em;
-                    margin-left: 0px;
-                    height: 15;
-                    padding: 5px;
-                    border-radius: 0 0 15px 15px;
-                }
+            &__pic {
+                width: 280px;
+                height:200px;
+                object-fit: cover;
+                object-position: 50% 50%;
+                float: inline-start;
+                border-radius: 15px 15px 0 0;
+            }
+            &__txt {
+                text-align: left;
+                font-size: 1.2em;
+                margin-left: 0px;
+                width: 280px;
+                height: 50;
+            }
+            &:hover {
+                background-color: greenyellow;
             }
         }
     }
 }
 
+.foot {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 400px;
+    min-width: 320px;
+    &__text {
+        height: 60px;
+        width: 250px;
+        color: white;
+        text-align: left;
+        font-family: Shrikhand;
+        font-size: $fontsize2;
+        padding: 10px;
+    }
+    &__notes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+        grid-gap: 10px;
+        &__1, &__2, &__3, &__4 {
+            width: 250px;
+            height: 20px;
+            font-size: 1.0em;
+            text-align: left;
+            border: none;
+            padding: 5px;
+            border-radius: 25px;
+            color: white;
+            background-color: $backgroundcolor4;
+            &:hover {
+                background-color: greenyellow;
+            }
+        }
+    }
+}
