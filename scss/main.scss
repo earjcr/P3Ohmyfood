@@ -1,5 +1,6 @@
 @import './resets';
 @import './variables';
+@import './rest1';
 
 
 body {
@@ -42,6 +43,7 @@ footer {
     &__text {
         font-family: Shrikhand;
         font-size: $fontsize2;
+        align-items: center;
     }
     &__right {
         color: white;
@@ -59,7 +61,7 @@ footer {
     font-family: Roboto;
     background-color: $backgroundcolor1;
     &__text {
-        display: inline;
+        display: inline-block;
         justify-content: space-around;
         text-align: center;
         background-color: $backgroundcolor2;
@@ -94,10 +96,14 @@ footer {
             }
         }
     }
+    &__space {
+        width: 10px;
+    }
     &__method {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: center;
         justify-content: space-around;
         align-items: center;
         max-height: 400px;
@@ -185,7 +191,7 @@ footer {
     &__text {
         height: 60px;
         width: 250px;
-        color: white;
+        color: $foottextcolor;
         text-align: left;
         font-family: Shrikhand;
         font-size: $fontsize2;

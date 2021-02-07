@@ -1,0 +1,79 @@
+.rest1 {
+    section {
+        color: $textcolor;
+        background: $backgroundcolor2;
+    }
+    .titlerest {
+        color: $textcolor;
+        background-color: $backgroundcolor1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        width: 60px 200px 60px;
+        &__left {
+            color: $textcolor;
+            background-color: $backgroundcolor1;
+            border: none;        
+        }
+        &__text {
+            font-family: Shrikhand;
+            font-size: $fontsize2;
+            align-items: center;
+        }
+        &__right {
+            color: white;
+            background-color: $backgroundcolor1;
+            border: none;        
+        }
+    }
+        
+    &__space {
+        width: 10px;
+    }
+    
+    .sectiontitle {
+        min-width: 320px;
+        height: 30px;
+        font-weight: 900;
+        padding: 10px;
+    }
+    .eatery {
+        justify-content: center;
+        &__box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 20px;
+        
+            &__rest {
+                border: none;
+                background-color: white;
+                width: 280px;
+                height: 250px;
+                border-radius: 15px;
+                &__pic {
+                    width: 280px;
+                    height:200px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                    float: inline-start;
+                    border-radius: 15px 15px 0 0;
+                }
+                &__txt {
+                    text-align: left;
+                    font-size: 1.2em;
+                    margin-left: 0px;
+                    width: 280px;
+                    height: 50;
+                }
+                &:hover {
+                    background-color: greenyellow;
+                }
+            }
+        }
+    }
+}    

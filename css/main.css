@@ -4,6 +4,93 @@
   padding: 0;
 }
 
+.rest1 section {
+  color: black;
+  background: #f2f2f2;
+}
+
+.rest1 .titlerest {
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 60px 200px 60px;
+}
+
+.rest1 .titlerest__left {
+  color: black;
+  background-color: white;
+  border: none;
+}
+
+.rest1 .titlerest__text {
+  font-family: Shrikhand;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.rest1 .titlerest__right {
+  color: white;
+  background-color: white;
+  border: none;
+}
+
+.rest1__space {
+  width: 10px;
+}
+
+.rest1 .sectiontitle {
+  min-width: 320px;
+  height: 30px;
+  font-weight: 900;
+  padding: 10px;
+}
+
+.rest1 .eatery {
+  justify-content: center;
+}
+
+.rest1 .eatery__box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.rest1 .eatery__box__rest {
+  border: none;
+  background-color: white;
+  width: 280px;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.rest1 .eatery__box__rest__pic {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  float: inline-start;
+  border-radius: 15px 15px 0 0;
+}
+
+.rest1 .eatery__box__rest__txt {
+  text-align: left;
+  font-size: 1.2em;
+  margin-left: 0px;
+  width: 280px;
+  height: 50;
+}
+
+.rest1 .eatery__box__rest:hover {
+  background-color: greenyellow;
+}
+
 body {
   width: 100%;
   margin: 0;
@@ -52,6 +139,7 @@ footer {
 .title__text {
   font-family: Shrikhand;
   font-size: 1.5em;
+  align-items: center;
 }
 
 .title__right {
@@ -72,7 +160,7 @@ footer {
 }
 
 .navbox__text {
-  display: inline;
+  display: inline-block;
   justify-content: space-around;
   text-align: center;
   background-color: #f2f2f2;
@@ -113,10 +201,15 @@ footer {
   background-color: greenyellow;
 }
 
+.navbox__space {
+  width: 10px;
+}
+
 .navbox__method {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
   justify-content: space-around;
   align-items: center;
   max-height: 400px;
@@ -214,7 +307,7 @@ footer {
 .foot__text {
   height: 60px;
   width: 250px;
-  color: white;
+  color: #fff;
   text-align: left;
   font-family: Shrikhand;
   font-size: 1.5em;
