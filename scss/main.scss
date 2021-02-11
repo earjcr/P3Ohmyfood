@@ -96,10 +96,13 @@ footer {
             width: 200px;
             height: 50px;
             border-radius: 25px;
+            border: none;
             color: white;
-            background-color: $primary-color;
+            background-image: linear-gradient($secondary-color, $primary-color);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
             &:hover {
-                background-color: greenyellow;
+                background-image: linear-gradient(mix($secondary-color, white, 95%), mix($primary-color, white, 95%));
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
             }
         }
     }
@@ -111,14 +114,14 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        justify-content: space-around;
         align-items: center;
         max-height: 400px;
         min-width: 320px;
         &__text {
             height: 60px;
             font-size: $fontsize2;
-            padding: 10px;
+            font-weight: 700;
+            padding: 20px;
         }
         &__steps {
             display: flex;
@@ -126,17 +129,34 @@ footer {
             flex-wrap: wrap;
             justify-content: center;
             justify-content: space-around;
-            grid-gap: 10px;
+            grid-gap: 20px;
+            padding: 20px;
             &__1 {
                 width: 250px;
                 height: 50px;
-                font-size: .8em;
+                text-align: left;
+                font-size: .7em;
+                font-weight: 700;
                 border: none;
                 padding: 20px;
-                border-radius: 25px;
+                border-radius: 15px;
                 background-color: $backgroundcolor2;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                &__a {
+                    padding: 3px 6px 3px 6px;
+                    color: white;
+                    background-color: $primary-color;
+                    border-radius: 10px;
+                    position: relative;
+                    right: 30px;
+                }
+                &__b {
+                    position: relative;
+                    right: 15px;
+                }
                 &:hover {
-                    background-color: greenyellow;
+                    background-color: mix($backgroundcolor2, white, 70%);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
             }
         }
@@ -188,13 +208,13 @@ p4 {
             }
             &__txt {
                 text-align: left;
-                font-size: 1.2em;
                 margin-left: 0px;
-                width: 280px;
+                padding: 5px;
+                width: 270px;
                 height: 50;
             }
             &:hover {
-                background-color: greenyellow;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
             }
         }
     }
@@ -253,20 +273,24 @@ p4 {
             justify-content: center;
             justify-content: space-around;
             grid-gap: 10px;
-            &__opt {
+                &__opt {
                 width: 290px;
                 height: 50px;
                 font-size: .8em;
+                justify-content: center;
                 border: none;
-                padding: 20px;
+                padding: 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
                 &:hover {
-                    background-color: greenyellow;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
             }
         }
     }
+}
+.order {
+    text-align: center;
 }
 .foot {
     display: flex;
@@ -296,16 +320,17 @@ p4 {
         &__1, &__2, &__3, &__4 {
             width: 250px;
             height: 20px;
+            font-style: none;
             font-family: 'Roboto', sans-serif;
             font-size: 1.0em;
             text-align: left;
             border: none;
             padding: 5px;
             border-radius: 25px;
-            color: white;
+            color: $backgroundcolor3;
             background-color: $backgroundcolor4;
             &:hover {
-                background-color: greenyellow;
+                color: white;
             }
         }
     }
