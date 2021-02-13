@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>EAR ohmyfood</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="fontawesome-free-5.15.2-web/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<main>
+    <div class="box">
+    Fill Effect
+    </div>
+</main>
+
+</body>
+START OF CSS FOR PRELOADER
+input[type="checkbox"]:hover,
+input:hover[type="checkbox"]:before,
+input:hover[type="checkbox"]:after {
+    background-color: #666666;
+}
+
+input[type="checkbox"]:checked,
+input:checked[type="checkbox"]:before,
+input:checked[type="checkbox"]:after {
+    animation: gradual-like 250ms linear 1;
+    background-color: #ff79da;
+}
+
+@keyframes gradual-like {
+    0% {
+    background-color: #666666;
+    }
+    100% {
+    background-color: #ff79da;
+    }
+}
+From Merisa Rudy to Everyone:  08:10 PM
+/* Preloader */
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+        z-index: 1001;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        z-index: 1001;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+#website-overlay {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+    background-color: white;
+    -webkit-animation: fade-out 3s;
+            animation: fade-out 3s;
+}
+
+.loader-wrapper {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.loader {
+    display: -ms-inline-grid;
+    display: inline-grid;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.loader-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;

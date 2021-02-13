@@ -271,6 +271,8 @@ p4 {
 }
 
 .menuhead__txt {
+  display: grid;
+  grid-template-columns: 260px 20px 20px;
   position: relative;
   bottom: 20px;
   font-family: 'Shrikhand';
@@ -285,7 +287,51 @@ p4 {
   border-radius: 25px 25px 0 0;
 }
 
+.menuhead__txt__heart {
+  position: relative;
+  left: 20px;
+}
+
+.menuhead__txt__heartfill {
+  color: red;
+}
+
+.menuhead__txt__heartfill::before {
+  content: attr(menuhead__txt__heartfill);
+  position: relative;
+  top: 0;
+  left: 0;
+  color: red;
+  overflow: hidden;
+  width: 0%;
+}
+
+.menuhead__txt__heartfill:hover {
+  position: relative;
+}
+
+.menuhead__txt__heartfill:hover::before {
+  width: 100%;
+}
+
 .menuhead:hover {
+  background-color: greenyellow;
+}
+
+.menuhead .heart__empty {
+  font-size: 16px;
+}
+
+.menuhead .heart__full {
+  color: red;
+  font-size: 0;
+  position: relative;
+  left: 1em;
+  top: 1em;
+}
+
+.menuhead .heart:hover {
+  cursor: pointer;
   background-color: greenyellow;
 }
 

@@ -232,6 +232,8 @@ p4 {
         float: inline-start;
     }
     &__txt {
+        display: grid;
+        grid-template-columns: 260px 20px 20px;
         position: relative;
         bottom: 20px;
         font-family: 'Shrikhand';
@@ -244,11 +246,48 @@ p4 {
         height: 50px;
         padding: 20px;
         border-radius: 25px 25px 0 0;
+        &__heart {
+            position: relative;
+            left: 20px;
+        }    
+        &__heartfill {
+            color: red;
+            &::before{
+                content: attr(menuhead__txt__heartfill);
+                position: relative;
+                top: 0;
+                left: 0;
+                color: red;
+                overflow: hidden;
+                width: 0%;
+            }
+            &:hover {
+                position: relative;
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
     }
     &:hover {
         background-color: greenyellow;
     }
-
+.heart {
+    &__empty {
+        font-size: 16px;
+    }
+    &__full {
+        color: red;
+        font-size: 0;
+        position: relative;
+        left: 1em;
+        top: 1em;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: greenyellow;
+    }
+}
 }
 .menu {
     display: flex;
