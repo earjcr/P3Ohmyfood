@@ -272,7 +272,7 @@ p4 {
 
 .menuhead__txt {
   display: grid;
-  grid-template-columns: 260px 20px 20px;
+  grid-template-columns: 240px 20px 20px;
   position: relative;
   bottom: 20px;
   font-family: 'Shrikhand';
@@ -288,51 +288,44 @@ p4 {
 }
 
 .menuhead__txt__heart {
+  font-size: 21px;
   position: relative;
-  left: 20px;
+  left: 18px;
+  background: #f2f2f2;
 }
 
 .menuhead__txt__heartfill {
-  color: red;
-}
-
-.menuhead__txt__heartfill::before {
-  content: attr(menuhead__txt__heartfill);
+  font-size: 17px;
   position: relative;
-  top: 0;
-  left: 0;
-  color: red;
-  overflow: hidden;
-  width: 0%;
+  bottom: 3px;
+  color: white;
 }
 
 .menuhead__txt__heartfill:hover {
-  position: relative;
+  animation: empty-heart 2s;
 }
 
-.menuhead__txt__heartfill:hover::before {
-  width: 100%;
+@keyframes fill-heart {
+  0% {
+    opacity: 1;
+    z-index: 1001;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
-.menuhead:hover {
-  background-color: greenyellow;
-}
-
-.menuhead .heart__empty {
-  font-size: 16px;
-}
-
-.menuhead .heart__full {
-  color: red;
-  font-size: 0;
-  position: relative;
-  left: 1em;
-  top: 1em;
-}
-
-.menuhead .heart:hover {
-  cursor: pointer;
-  background-color: greenyellow;
+@keyframes empty-heart {
+  0% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
 }
 
 .menu {

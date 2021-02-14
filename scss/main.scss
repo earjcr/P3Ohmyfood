@@ -233,7 +233,7 @@ p4 {
     }
     &__txt {
         display: grid;
-        grid-template-columns: 260px 20px 20px;
+        grid-template-columns: 240px 20px 20px;
         position: relative;
         bottom: 20px;
         font-family: 'Shrikhand';
@@ -247,47 +247,42 @@ p4 {
         padding: 20px;
         border-radius: 25px 25px 0 0;
         &__heart {
+            font-size: 21px;
             position: relative;
-            left: 20px;
-        }    
+            left: 18px;
+            background: #f2f2f2;
+        } 
         &__heartfill {
-            color: red;
-            &::before{
-                content: attr(menuhead__txt__heartfill);
-                position: relative;
-                top: 0;
-                left: 0;
-                color: red;
-                overflow: hidden;
-                width: 0%;
-            }
+            font-size: 17px;
+            position: relative;
+            bottom: 3px;
+            color: white;
             &:hover {
-                position: relative;
-                &::before {
-                    width: 100%;
-                }
-            }
+                animation: empty-heart 2s;
+            } 
         }
     }
-    &:hover {
-        background-color: greenyellow;
+}
+@keyframes fill-heart {
+    0% {
+        opacity: 1;
+        z-index: 1001;
     }
-.heart {
-    &__empty {
-        font-size: 16px;
+    50% {
+        opacity: 1;
     }
-    &__full {
-        color: red;
-        font-size: 0;
-        position: relative;
-        left: 1em;
-        top: 1em;
-    }
-    &:hover {
-        cursor: pointer;
-        background-color: greenyellow;
+    100% {
+        opacity: 0;
+        z-index: -1;
     }
 }
+@keyframes empty-heart {
+    0% {
+        color: white;
+    }
+    100% {
+        color: red;
+    }
 }
 .menu {
     display: flex;
