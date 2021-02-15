@@ -302,29 +302,28 @@ p4 {
 }
 
 .menuhead__txt__heartfill:hover {
+  animation: fill-heart 2s;
+}
+
+.menuhead__txt__heartfill:active {
   animation: empty-heart 2s;
 }
 
 @keyframes fill-heart {
   0% {
-    opacity: 1;
-    z-index: 1001;
-  }
-  50% {
-    opacity: 1;
+    color: white;
   }
   100% {
-    opacity: 0;
-    z-index: -1;
+    color: red;
   }
 }
 
 @keyframes empty-heart {
   0% {
-    color: white;
+    color: red;
   }
   100% {
-    color: red;
+    color: white;
   }
 }
 
@@ -367,10 +366,22 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
+  animation-delay: 1000ms;
+  animation-duration: 3000ms;
+  animation: slidein 3000ms;
 }
 
 .menu__course__opts__opt:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-400%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .order {

@@ -258,32 +258,24 @@ p4 {
             bottom: 3px;
             color: white;
             &:hover {
-                animation: empty-heart 2s;
+                animation: fill-heart 2s;
             } 
+            &:active {
+                animation: empty-heart 2s;
+            }
         }
     }
 }
+
 @keyframes fill-heart {
-    0% {
-        opacity: 1;
-        z-index: 1001;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        z-index: -1;
-    }
+    0%   { color: white; }
+    100% { color: red; }
 }
 @keyframes empty-heart {
-    0% {
-        color: white;
-    }
-    100% {
-        color: red;
-    }
+    0%   { color: red; }
+    100% { color: white; }
 }
+
 .menu {
     display: flex;
     flex-direction: row;
@@ -307,7 +299,7 @@ p4 {
             justify-content: center;
             justify-content: space-around;
             grid-gap: 10px;
-                &__opt {
+            &__opt {
                 width: 290px;
                 height: 50px;
                 font-size: .8em;
@@ -319,8 +311,23 @@ p4 {
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
+                $slidein-delay: $slidein-delay + 1000ms;
+                animation-delay: $slidein-delay;
+                animation-duration: $slidein-dur;
+                animation: slidein $slidein-dur;
             }
         }
+    }
+}
+@for $i from 1 through 3 {
+    
+}
+@keyframes slidein {
+    from {
+        transform: translateX(-400%);
+    }
+    to {
+        transform: translateX(0%);
     }
 }
 .order {
