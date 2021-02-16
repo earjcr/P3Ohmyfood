@@ -299,7 +299,57 @@ p4 {
             justify-content: center;
             justify-content: space-around;
             grid-gap: 10px;
-            &__opt {
+            &__1 {
+                display: grid;
+                grid-template-columns: 245px 25px;
+                align-items: flex-end;
+                height: 50px;
+                font-size: .8em;
+                justify-content: center;
+                border: none;
+                padding: 10px;
+                border-radius: 15px;
+                background-color: $backgroundcolor1;
+                animation: slidein 4000ms -900ms;
+                &:hover {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+            &__2 {
+                display: grid;
+                grid-template-columns: 245px 25px;
+                align-items: flex-end;
+                height: 50px;
+                font-size: .8em;
+                justify-content: center;
+                border: none;
+                padding: 10px;
+                border-radius: 15px;
+                background-color: $backgroundcolor1;
+                animation: slidein 4000ms -900ms;
+                &:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+            &__3 {
+                display: grid;
+                grid-template-columns: 245px 25px;
+                align-items: flex-end;
+                height: 50px;
+                font-size: .8em;
+                justify-content: center;
+                border: none;
+                padding: 10px;
+                border-radius: 15px;
+                background-color: $backgroundcolor1;
+                animation: slidein 4000ms -300ms;
+                &:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+            &__4 {
                 width: 290px;
                 height: 50px;
                 font-size: .8em;
@@ -308,31 +358,47 @@ p4 {
                 padding: 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
+                animation: slidein 4000ms 0ms;
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
-                $slidein-delay: $slidein-delay + 1000ms;
-                animation-delay: $slidein-delay;
-                animation-duration: $slidein-dur;
-                animation: slidein $slidein-dur;
             }
+
         }
     }
 }
-@for $i from 1 through 3 {
-    
-}
 @keyframes slidein {
     from {
-        transform: translateX(-400%);
+        transform: translateY(40%);
+        opacity: 0;
     }
     to {
-        transform: translateX(0%);
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
 .order {
-    text-align: center;
+    background-color: $backgroundcolor2;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-image: linear-gradient($secondary-color, $primary-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+    &__box {
+        width: 200px;
+        height: 50px;
+        padding: 5px 20px 5px 20px;
+        font-size: 1.2em;
+    }
+    &:hover {
+        background-image: linear-gradient(mix($secondary-color, white, 95%), mix($primary-color, white, 95%));
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+    }
 }
+
 .foot {
     display: flex;
     flex-direction: column;
