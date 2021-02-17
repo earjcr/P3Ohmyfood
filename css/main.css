@@ -14,7 +14,6 @@ body {
 header {
   color: black;
   background: white;
-  text-align: center;
 }
 
 nav {
@@ -72,7 +71,6 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*INSTALL QUERY >680px*/
   justify-content: space-around;
   justify-content: center;
   font-family: Roboto;
@@ -81,19 +79,23 @@ footer {
 
 .navbox__text {
   display: inline-block;
+  justify-content: center;
   justify-content: space-around;
   text-align: center;
-  background-color: #f0f0f0;
-  height: 300px;
+  background-color: #e0dcdc;
+  height: 260px;
   width: 320px;
 }
 
 .navbox__text__loc {
-  font-family: 'Roboto', sans-serif;
-  height: 50px;
-  width: 320px;
-  border: 0px;
+  text-decoration: none;
+  border: none;
+  justify-content: start;
   background-color: #e0dcdc;
+  font-family: 'Roboto', sans-serif;
+  height: 30px;
+  padding: 5px;
+  color: black;
 }
 
 .navbox__text__text1 {
@@ -101,13 +103,15 @@ footer {
   font-size: 1.2em;
   font-weight: 900;
   height: 60px;
-  padding: 25px;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
 
 .navbox__text__text2 {
   font-size: 1.0em;
   height: 60px;
-  padding: 25px 25px 80px 25px;
+  padding: 20px 20px 70px 20px;
+  background-color: #f0f0f0;
 }
 
 .navbox__text__explore {
@@ -117,6 +121,7 @@ footer {
   border-radius: 25px;
   border: none;
   color: white;
+  background-color: #f0f0f0;
   background-image: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
@@ -127,7 +132,8 @@ footer {
 }
 
 .navbox__space {
-  width: 10px;
+  width: 320px;
+  height: 10px;
 }
 
 .navbox__method {
@@ -154,7 +160,7 @@ footer {
   justify-content: center;
   justify-content: space-around;
   grid-gap: 20px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .navbox__method__steps__1 {
@@ -244,9 +250,11 @@ p4 {
 }
 
 .eatery__box__rest__txt {
+  text-decoration: none;
   text-align: left;
   margin-left: 0px;
   padding: 5px;
+  color: black;
   width: 270px;
   height: 50;
 }
@@ -368,7 +376,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 4000ms -900ms;
+  animation: slidein 3000ms 0ms;
 }
 
 .menu__course__opts__1:hover {
@@ -388,7 +396,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 4000ms -900ms;
+  animation: slidein 3000ms 200ms;
 }
 
 .menu__course__opts__2:hover {
@@ -406,7 +414,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 4000ms -300ms;
+  animation: slidein 3000ms 400ms;
 }
 
 .menu__course__opts__3:hover {
@@ -422,7 +430,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 4000ms 0ms;
+  animation: slidein 3000ms 600ms;
 }
 
 .menu__course__opts__4:hover {
@@ -430,19 +438,22 @@ p4 {
 }
 
 @keyframes slidein {
-  from {
-    transform: translateY(40%);
+  0% {
     opacity: 0;
   }
-  to {
-    transform: translateY(0%);
+  25% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 
 .order {
   background-color: #f0f0f0;
-  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 50px;
   border-radius: 25px;

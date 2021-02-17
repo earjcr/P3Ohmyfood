@@ -11,7 +11,6 @@ body {
 header {
     color: $textcolor;
     background: $backgroundcolor1;
-    text-align: center;
 }
 nav {
     color: $textcolor;
@@ -60,36 +59,42 @@ footer {
 .navbox {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /*INSTALL QUERY >680px*/
+    flex-wrap: wrap;
     justify-content: space-around;
     justify-content: center;
     font-family: Roboto;
     background-color: $backgroundcolor1;
     &__text {
         display: inline-block;
+        justify-content: center;
         justify-content: space-around;
         text-align: center;
-        background-color: $backgroundcolor2;
-        height: 300px;
+        background-color: $backgroundcolor3;
+        height: 260px;
         width: 320px;
-            &__loc {
-            font-family: 'Roboto', sans-serif;
-            height: 50px;
-            width: 320px;
-            border: 0px;
+        &__loc {
+            text-decoration: none;
+            border: none;
+            justify-content:start;
             background-color: $backgroundcolor3;
+            font-family: 'Roboto', sans-serif;
+            height: 30px;
+            padding: 5px;
+            color: black;
         }
         &__text1 {
             font-family: 'Roboto', sans-serif;
             font-size: 1.2em;
             font-weight: 900;
             height: 60px;
-            padding: 25px;
+            padding: 20px;
+            background-color: $backgroundcolor2;
         }
         &__text2 {
             font-size: 1.0em;
             height: 60px;
-            padding: 25px 25px 80px 25px;
+            padding: 20px 20px 70px 20px;
+            background-color: $backgroundcolor2;
         }
         &__explore {
             font-size: 1.0em;
@@ -98,6 +103,7 @@ footer {
             border-radius: 25px;
             border: none;
             color: white;
+            background-color: $backgroundcolor2;
             background-image: linear-gradient($secondary-color, $primary-color);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
             &:hover {
@@ -107,7 +113,8 @@ footer {
         }
     }
     &__space {
-        width: 10px;
+        width: 320px;
+        height: 10px;
     }
     &__method {
         display: flex;
@@ -130,7 +137,7 @@ footer {
             justify-content: center;
             justify-content: space-around;
             grid-gap: 20px;
-            padding: 20px;
+            padding: 15px;
             &__1 {
                 width: 250px;
                 height: 50px;
@@ -207,9 +214,11 @@ p4 {
                 border-radius: 15px 15px 0 0;
             }
             &__txt {
+                text-decoration: none;
                 text-align: left;
                 margin-left: 0px;
                 padding: 5px;
+                color: black;
                 width: 270px;
                 height: 50;
             }
@@ -310,7 +319,7 @@ p4 {
                 padding: 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
-                animation: slidein 4000ms -900ms;
+                animation: slidein 3000ms 0ms;
                 &:hover {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -328,7 +337,7 @@ p4 {
                 padding: 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
-                animation: slidein 4000ms -900ms;
+                animation: slidein 3000ms 200ms;
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
@@ -344,7 +353,7 @@ p4 {
                 padding: 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
-                animation: slidein 4000ms -300ms;
+                animation: slidein 3000ms 400ms;
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
@@ -358,7 +367,7 @@ p4 {
                 padding: 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
-                animation: slidein 4000ms 0ms;
+                animation: slidein 3000ms 600ms;
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
@@ -368,18 +377,15 @@ p4 {
     }
 }
 @keyframes slidein {
-    from {
-        transform: translateY(40%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0%);
-        opacity: 1;
-    }
+    0% {opacity: 0;}
+    25% {opacity: 0;
+        transform: translateY(40%);}
+    100% {opacity: 1;
+         transform: translateY(0%);}
 }
 .order {
     background-color: $backgroundcolor2;
-    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 50px;
     border-radius: 25px;
