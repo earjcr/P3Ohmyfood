@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* DIFF IN HEART ANIM */
 body {
   width: 100%;
   margin: 0;
@@ -243,13 +244,46 @@ p4 {
 }
 
 .eatery__box__rest__txt {
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: 220px 20px 20px;
+  justify-content: center;
   text-align: left;
+  text-decoration: none;
   margin-left: 0px;
-  padding: 5px;
+  padding: 2px 5px 0px 5px;
   color: black;
   width: 270px;
   height: 50px;
+}
+
+.eatery__box__rest__txt__meld {
+  display: block;
+  position: relative;
+  width: 220px;
+  height: 50px;
+  text-align: left;
+}
+
+.eatery__box__rest__txt__heart {
+  font-size: 21px;
+  position: relative;
+  left: 18px;
+  top: 10px;
+}
+
+.eatery__box__rest__txt__heartfill {
+  font-size: 17px;
+  position: relative;
+  top: 12.5px;
+  color: white;
+}
+
+.eatery__box__rest__txt__heartfill:hover {
+  animation: fill-heart 4s;
+}
+
+.eatery__box__rest__txt__heartfill:active {
+  animation: empty-heart 2s;
 }
 
 .eatery__box__rest:hover {
@@ -276,6 +310,7 @@ p4 {
   grid-template-columns: 240px 20px 20px;
   position: relative;
   bottom: 20px;
+  align-items: center;
   font-family: 'Shrikhand';
   text-align: left;
   font-size: 1.2em;
@@ -292,18 +327,16 @@ p4 {
   font-size: 21px;
   position: relative;
   left: 18px;
-  background: #f2f2f2;
 }
 
 .menuhead__txt__heartfill {
   font-size: 17px;
   position: relative;
-  bottom: 3px;
   color: white;
 }
 
 .menuhead__txt__heartfill:hover {
-  animation: fill-heart 2s;
+  animation: fill-heart 4s;
 }
 
 .menuhead__txt__heartfill:active {

@@ -208,13 +208,42 @@ p4 {
                 border-radius: 15px 15px 0 0;
             }
             &__txt {
-                text-decoration: none;
+                display: grid;
+                grid-template-columns: 220px 20px 20px;
+                justify-content: center;
                 text-align: left;
+                text-decoration: none;
                 margin-left: 0px;
-                padding: 5px;
+                padding: 2px 5px 0px 5px;
                 color: black;
                 width: 270px;
                 height: 50px;
+                &__meld {
+                    display: block;
+                    position: relative;
+                    width: 220px;
+                    height: 50px;
+                    text-align: left;
+                }
+                &__heart {
+                    font-size: 21px;
+                    position: relative;
+                    left: 18px;
+                    top: 10px;
+                } 
+                &__heartfill {
+                    font-size: 17px;
+                    position: relative;
+                    top: 12.5px;
+                    color: white;
+                    &:hover {
+                        animation: fill-heart 4s;
+                    } 
+                    &:active {
+                        animation: empty-heart 2s;
+                    }
+                }
+        
             }
             &:hover {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
@@ -239,6 +268,7 @@ p4 {
         grid-template-columns: 240px 20px 20px;
         position: relative;
         bottom: 20px;
+        align-items: center;
         font-family: 'Shrikhand';
         text-align: left;
         font-size: 1.2em;
@@ -253,15 +283,13 @@ p4 {
             font-size: 21px;
             position: relative;
             left: 18px;
-            background: #f2f2f2;
         } 
         &__heartfill {
             font-size: 17px;
             position: relative;
-            bottom: 3px;
             color: white;
             &:hover {
-                animation: fill-heart 2s;
+                animation: fill-heart 4s;
             } 
             &:active {
                 animation: empty-heart 2s;
@@ -269,7 +297,6 @@ p4 {
         }
     }
 }
-
 @keyframes fill-heart {
     0%   { color: white; }
     100% { color: red; }
