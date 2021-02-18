@@ -318,15 +318,17 @@ p4 {
         width: 320px;
         padding-bottom: 10px;
         &__txt {
-            height: 40px;
+            height: 50px;
             font-size: 0.8em;
-            padding: 20px 0 0px 20px;
+            padding: 20px;
         }
         &__greenline {
+
             height: 5px;
             width: 40px;
             position: relative;
             left: 20px;
+            bottom: 10px;
             background-color: $tertiary-color;
         }
         &__opts {
@@ -336,23 +338,49 @@ p4 {
             justify-content: center;
             justify-content: space-around;
             grid-gap: 10px;
-            padding: 10px 0 0 0;
             &__1 {
                 display: grid;
-                grid-template-columns: 245px 25px;
-                align-items: flex-end;
+                grid-template-columns: 240px 40px 0px;
                 height: 50px;
                 font-size: .8em;
                 justify-content: center;
+                align-items: center;
                 border: none;
-                padding: 10px;
+                padding: 0 0 0 10px;
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
                 animation: slidein 3000ms 0ms;
-                &:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                &__plate {
+                    display: grid;
+                    grid-template-rows: 20px 15px;
+                    white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                }
+                &__check {
+                    position: relative;
+                    text-align: center;
+                    height: 50px;
+                    width: 60px;
+                    border-radius: 0 15px 15px 0;
+                    background-color: $tertiary-color;
+                    overflow: hidden;
+                    &__mark {
+                        position: relative;
+                        top: 13px;
+                        text-align: center;
+                        padding: 5px;
+                        color: $tertiary-color;
+                        background-color: white;                     border-radius: 15px;
+                        font-size: 15px;
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    animation: choose 5s;
                 }
             }
             &__2 {
@@ -367,6 +395,7 @@ p4 {
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
                 animation: slidein 3000ms 200ms;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
@@ -383,6 +412,7 @@ p4 {
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
                 animation: slidein 3000ms 400ms;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
@@ -397,6 +427,7 @@ p4 {
                 border-radius: 15px;
                 background-color: $backgroundcolor1;
                 animation: slidein 3000ms 600ms;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 &:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
                 }
@@ -405,6 +436,19 @@ p4 {
         }
     }
 }
+@keyframes choose {
+    0% {grid-template-columns: 240px 40px 0px; rotate chk}
+    10% {grid-template-columns: 225px 40px 15px;}
+    20% {grid-template-columns: 210px 40px 30px;}
+    30% {grid-template-columns: 195px 40px 45px;}
+    40% {grid-template-columns: 180px 40px 60px;}
+    60% {grid-template-columns: 180px 40px 60px;}
+    70% {grid-template-columns: 195px 40px 45px;}
+    80% {grid-template-columns: 210px 40px 30px;}
+    90% {grid-template-columns: 225px 40px 15px;}
+    100% {grid-template-columns: 240px 40px 0px;}
+}
+
 @keyframes slidein {
     0% {opacity: 0;}
     25% {opacity: 0;

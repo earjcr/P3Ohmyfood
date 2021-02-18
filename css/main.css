@@ -377,9 +377,9 @@ p4 {
 }
 
 .menu__course__txt {
-  height: 40px;
+  height: 50px;
   font-size: 0.8em;
-  padding: 20px 0 0px 20px;
+  padding: 20px;
 }
 
 .menu__course__greenline {
@@ -387,6 +387,7 @@ p4 {
   width: 40px;
   position: relative;
   left: 20px;
+  bottom: 10px;
   background-color: #99E2D0;
 }
 
@@ -397,27 +398,57 @@ p4 {
   justify-content: center;
   justify-content: space-around;
   grid-gap: 10px;
-  padding: 10px 0 0 0;
 }
 
 .menu__course__opts__1 {
   display: grid;
-  grid-template-columns: 245px 25px;
-  align-items: flex-end;
+  grid-template-columns: 240px 40px 0px;
   height: 50px;
   font-size: .8em;
   justify-content: center;
+  align-items: center;
   border: none;
-  padding: 10px;
+  padding: 0 0 0 10px;
   border-radius: 15px;
   background-color: white;
   animation: slidein 3000ms 0ms;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu__course__opts__1__plate {
+  display: grid;
+  grid-template-rows: 20px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu__course__opts__1__check {
+  position: relative;
+  text-align: center;
+  height: 50px;
+  width: 60px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  overflow: hidden;
+}
+
+.menu__course__opts__1__check__mark {
+  position: relative;
+  top: 13px;
+  text-align: center;
+  padding: 5px;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 15px;
 }
 
 .menu__course__opts__1:hover {
+  cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+  animation: choose 5s;
 }
 
 .menu__course__opts__2 {
@@ -432,6 +463,7 @@ p4 {
   border-radius: 15px;
   background-color: white;
   animation: slidein 3000ms 200ms;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
 .menu__course__opts__2:hover {
@@ -450,6 +482,7 @@ p4 {
   border-radius: 15px;
   background-color: white;
   animation: slidein 3000ms 400ms;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
 .menu__course__opts__3:hover {
@@ -466,10 +499,44 @@ p4 {
   border-radius: 15px;
   background-color: white;
   animation: slidein 3000ms 600ms;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
 .menu__course__opts__4:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes choose {
+  0% {
+    grid-template-columns: 240px 40px 0px;
+  }
+  10% {
+    grid-template-columns: 225px 40px 15px;
+  }
+  20% {
+    grid-template-columns: 210px 40px 30px;
+  }
+  30% {
+    grid-template-columns: 195px 40px 45px;
+  }
+  40% {
+    grid-template-columns: 180px 40px 60px;
+  }
+  60% {
+    grid-template-columns: 180px 40px 60px;
+  }
+  70% {
+    grid-template-columns: 195px 40px 45px;
+  }
+  80% {
+    grid-template-columns: 210px 40px 30px;
+  }
+  90% {
+    grid-template-columns: 225px 40px 15px;
+  }
+  100% {
+    grid-template-columns: 240px 40px 0px;
+  }
 }
 
 @keyframes slidein {
