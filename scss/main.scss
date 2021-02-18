@@ -35,11 +35,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     height: 40px;
-    width: 60px 200px 60px;
     &__left {
-        border: none;       
-    }
-    &__return {
         color: $textcolor;
         background-color: $backgroundcolor1;
         border: none;
@@ -49,10 +45,12 @@ footer {
     &__text {
         font-family: 'Shrikhand', sans-serif;
         font-size: $fontsize2;
-        align-items: center;
+        text-align: center;
     }
     &__right {
-        border: none;        
+        border: none;
+        color: $backgroundcolor1;
+        background-color: $backgroundcolor1;      
     }
 }
 
@@ -61,7 +59,6 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    justify-content: center;
     font-family: Roboto;
     background-color: $backgroundcolor1;
     &__text {
@@ -69,18 +66,22 @@ footer {
         justify-content: center;
         justify-content: space-around;
         text-align: center;
-        background-color: $backgroundcolor3;
+        background-color: $backgroundcolor2;
         height: 260px;
         width: 320px;
         &__loc {
-            text-decoration: none;
             border: none;
             justify-content:start;
-            background-color: $backgroundcolor3;
             font-family: 'Roboto', sans-serif;
             height: 30px;
+            width: 310px;
+            background-color: $backgroundcolor3;
             padding: 5px;
             color: black;
+            &__mark {
+                text-decoration: none;
+                background-color: $backgroundcolor3;
+            }
         }
         &__text1 {
             font-family: 'Roboto', sans-serif;
@@ -88,13 +89,11 @@ footer {
             font-weight: 900;
             height: 60px;
             padding: 20px;
-            background-color: $backgroundcolor2;
         }
         &__text2 {
             font-size: 1.0em;
             height: 60px;
             padding: 20px 20px 70px 20px;
-            background-color: $backgroundcolor2;
         }
         &__explore {
             font-size: 1.0em;
@@ -103,7 +102,6 @@ footer {
             border-radius: 25px;
             border: none;
             color: white;
-            background-color: $backgroundcolor2;
             background-image: linear-gradient($secondary-color, $primary-color);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
             &:hover {
@@ -111,10 +109,6 @@ footer {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
             }
         }
-    }
-    &__space {
-        width: 320px;
-        height: 10px;
     }
     &__method {
         display: flex;
@@ -220,7 +214,7 @@ p4 {
                 padding: 5px;
                 color: black;
                 width: 270px;
-                height: 50;
+                height: 50px;
             }
             &:hover {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
@@ -384,24 +378,27 @@ p4 {
          transform: translateY(0%);}
 }
 .order {
+    display: grid;
+    justify-content: space-around;
     background-color: $backgroundcolor2;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
+    align-items: center;
+    padding: 10px 60px 10px 60px;
     border: none;
     color: white;
-    background-image: linear-gradient($secondary-color, $primary-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-    &__box {
+    &__bubble {
+        text-align: center;
         width: 200px;
         height: 50px;
-        padding: 5px 20px 5px 20px;
-        font-size: 1.2em;
-    }
-    &:hover {
-        background-image: linear-gradient(mix($secondary-color, white, 95%), mix($primary-color, white, 95%));
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+        padding: 15px 20px 5px 20px;
+        font-size: .9em;
+        border-radius: 25px;
+        border: none;
+        background-image: linear-gradient($secondary-color, $primary-color);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+        &:hover {
+            background-image: linear-gradient(mix($secondary-color, white, 95%), mix($primary-color, white, 95%));
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+        }
     }
 }
 
@@ -416,13 +413,14 @@ p4 {
     &__text {
         height: 60px;
         width: 250px;
-        color: $foottextcolor;
+        color: $backgroundcolor3;
         text-align: left;
         font-family: Shrikhand;
         font-size: $fontsize2;
         padding: 10px;
     }
     &__notes {
+        text-decoration: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -431,9 +429,9 @@ p4 {
         grid-gap: 10px;
         font-family: 'Roboto', sans-serif;
         &__1, &__2, &__3, &__4 {
+            text-decoration: none;
             width: 250px;
             height: 20px;
-            font-style: none;
             font-family: 'Roboto', sans-serif;
             font-size: 1.0em;
             text-align: left;
@@ -445,6 +443,14 @@ p4 {
             &:hover {
                 color: white;
             }
-        }
+            a1 {
+                text-decoration: none;
+            }
+                    }
     }
 }
+a {
+    text-decoration: none;
+    color: $backgroundcolor2;
+}
+
