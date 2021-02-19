@@ -164,6 +164,7 @@ footer {
   font-size: .7em;
   font-weight: 700;
   border: none;
+  outline: none;
   padding: 20px;
   border-radius: 15px;
   background-color: #f0f0f0;
@@ -185,7 +186,8 @@ footer {
 }
 
 .navbox__method__steps__1:hover {
-  background-color: whitesmoke;
+  outline: none;
+  background-color: #e9ddf8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -276,10 +278,12 @@ p4 {
   position: relative;
   top: 12.5px;
   color: white;
+  transition: color 2s;
 }
 
 .eatery__box__rest__txt__heartfill:hover {
-  animation: fill-heart 4s;
+  /*animation: fill-heart 4s;*/
+  color: red;
 }
 
 .eatery__box__rest__txt__heartfill:active {
@@ -333,10 +337,12 @@ p4 {
   font-size: 17px;
   position: relative;
   color: white;
+  transition: color;
 }
 
 .menuhead__txt__heartfill:hover {
-  animation: fill-heart 4s;
+  /*animation: fill-heart 4s;*/
+  color: red;
 }
 
 .menuhead__txt__heartfill:active {
@@ -402,16 +408,18 @@ p4 {
 
 .menu__course__opts__1 {
   display: grid;
-  grid-template-columns: 240px 40px 0px;
+  grid-template-columns: 240px 40px 60px;
   height: 50px;
+  width: 290px;
   font-size: .8em;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   border: none;
   padding: 0 0 0 10px;
   border-radius: 15px;
+  overflow: hidden;
   background-color: white;
-  animation: slidein 3000ms 0ms;
+  animation: slidein 3000ms -600ms;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -448,7 +456,8 @@ p4 {
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
-  animation: choose 5s;
+  transition: all 350ms linear;
+  /*animation: choose 5s;*/
 }
 
 .menu__course__opts__2 {
@@ -462,7 +471,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 3000ms 200ms;
+  animation: slidein 3000ms -400ms;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -481,7 +490,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 3000ms 400ms;
+  animation: slidein 3000ms -200ms;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -498,7 +507,7 @@ p4 {
   padding: 10px;
   border-radius: 15px;
   background-color: white;
-  animation: slidein 3000ms 600ms;
+  animation: slidein 3000ms 000ms;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -506,37 +515,55 @@ p4 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
+/*.menu__course__opts__1__plate */
+.ellipse {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @keyframes choose {
   0% {
-    grid-template-columns: 240px 40px 0px;
+    grid-template-columns: 240px 40px 60px;
+  }
+  5% {
+    grid-template-columns: 232px 40px 60px;
   }
   10% {
-    grid-template-columns: 225px 40px 15px;
+    grid-template-columns: 225px 40px 60px;
+  }
+  15% {
+    grid-template-columns: 217px 40px 60px;
   }
   20% {
-    grid-template-columns: 210px 40px 30px;
+    grid-template-columns: 210px 40px 60px;
+  }
+  25% {
+    grid-template-columns: 202px 40px 60px;
   }
   30% {
-    grid-template-columns: 195px 40px 45px;
+    grid-template-columns: 195px 40px 60px;
+  }
+  35% {
+    grid-template-columns: 187px 40px 60px;
   }
   40% {
     grid-template-columns: 180px 40px 60px;
   }
-  60% {
+  100% {
     grid-template-columns: 180px 40px 60px;
   }
-  70% {
-    grid-template-columns: 195px 40px 45px;
-  }
-  80% {
-    grid-template-columns: 210px 40px 30px;
-  }
-  90% {
-    grid-template-columns: 225px 40px 15px;
-  }
-  100% {
-    grid-template-columns: 240px 40px 0px;
-  }
+  /*
+    60% {grid-template-columns: 180px 40px 60px;}
+    65% {grid-template-columns: 187px 40px 60px;}
+    70% {grid-template-columns: 195px 40px 60px;}
+    75% {grid-template-columns: 202px 40px 60px;}
+    80% {grid-template-columns: 210px 40px 60px;}
+    85% {grid-template-columns: 217px 40px 60px;}
+    90% {grid-template-columns: 225px 40px 60px;}
+    95% {grid-template-columns: 232px 40px 60px;}
+    100% {grid-template-columns: 240px 40px 60px;}
+*/
 }
 
 @keyframes slidein {
