@@ -282,12 +282,11 @@ p4 {
 }
 
 .eatery__box__rest__txt__heartfill:hover {
-  /*animation: fill-heart 4s;*/
   color: red;
 }
 
 .eatery__box__rest__txt__heartfill:active {
-  animation: empty-heart 2s;
+  color: red;
 }
 
 .eatery__box__rest:hover {
@@ -337,34 +336,15 @@ p4 {
   font-size: 17px;
   position: relative;
   color: white;
-  transition: color;
+  transition: color 2s;
 }
 
 .menuhead__txt__heartfill:hover {
-  /*animation: fill-heart 4s;*/
   color: red;
 }
 
 .menuhead__txt__heartfill:active {
-  animation: empty-heart 2s;
-}
-
-@keyframes fill-heart {
-  0% {
-    color: white;
-  }
-  100% {
-    color: red;
-  }
-}
-
-@keyframes empty-heart {
-  0% {
-    color: red;
-  }
-  100% {
-    color: white;
-  }
+  color: red;
 }
 
 .menu {
@@ -409,11 +389,10 @@ p4 {
 .menu__course__opts__1 {
   display: grid;
   grid-template-columns: 240px 40px 60px;
+  align-items: center;
   height: 50px;
   width: 290px;
   font-size: .8em;
-  justify-content: left;
-  align-items: center;
   border: none;
   padding: 0 0 0 10px;
   border-radius: 15px;
@@ -421,21 +400,34 @@ p4 {
   background-color: white;
   animation: slidein 3000ms -600ms;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+  /* &:hover {
+                    position: relative;
+                    grid-template-columns: 180px 40px 60px;
+                }*/
 }
 
 .menu__course__opts__1__plate {
   display: grid;
   grid-template-rows: 20px 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 240px;
+  padding: 5px 0 5px 0;
+  transition: width 2000ms ease-in-out;
+}
+
+.menu__course__opts__1__price {
+  width: 40px;
+  text-align: center;
+  right: 0;
+  transition: right 2000ms ease-in-out;
 }
 
 .menu__course__opts__1__check {
   position: relative;
-  text-align: center;
   height: 50px;
   width: 60px;
+  right: 0px;
+  text-align: center;
+  transition: right 2000ms ease-in-out;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
   overflow: hidden;
@@ -450,14 +442,29 @@ p4 {
   background-color: white;
   border-radius: 15px;
   font-size: 15px;
+  transition: transform 2000ms ease-in-out;
 }
 
-.menu__course__opts__1:hover {
+.menu__course__opts__1:hover .menu__course__opts__1__check__mark {
+  transform: rotate(360deg);
+}
+
+.menu__course__opts__1:hover .menu__course__opts__1__check {
+  position: relative;
+  right: 60px;
+}
+
+.menu__course__opts__1:hover .menu__course__opts__1__price {
+  position: relative;
+  right: 60px;
+}
+
+.menu__course__opts__1:hover .menu__course__opts__1__plate {
+  width: 180px;
+  position: relative;
   cursor: pointer;
-  overflow: hidden;
   text-overflow: ellipsis;
   transition: all 350ms linear;
-  /*animation: choose 5s;*/
 }
 
 .menu__course__opts__2 {
@@ -515,7 +522,6 @@ p4 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-/*.menu__course__opts__1__plate */
 .ellipse {
   text-overflow: ellipsis;
   overflow: hidden;
