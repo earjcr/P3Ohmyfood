@@ -89,7 +89,7 @@ footer {
   justify-content: start;
   font-family: 'Roboto', sans-serif;
   height: 30px;
-  width: 310px;
+  width: 320px;
   background-color: #e0dcdc;
   padding: 5px;
   color: black;
@@ -400,10 +400,6 @@ p4 {
   background-color: white;
   animation: slidein 3000ms -600ms;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-  /* &:hover {
-                    position: relative;
-                    grid-template-columns: 180px 40px 60px;
-                }*/
 }
 
 .menu__course__opts__1__plate {
@@ -411,14 +407,14 @@ p4 {
   grid-template-rows: 20px 15px;
   width: 240px;
   padding: 5px 0 5px 0;
-  transition: width 2000ms ease-in-out;
+  transition: width 1000ms ease-in-out;
 }
 
 .menu__course__opts__1__price {
   width: 40px;
   text-align: center;
   right: 0;
-  transition: right 2000ms ease-in-out;
+  transition: right 1000ms ease-in-out;
 }
 
 .menu__course__opts__1__check {
@@ -427,7 +423,7 @@ p4 {
   width: 60px;
   right: 0px;
   text-align: center;
-  transition: right 2000ms ease-in-out;
+  transition: right 1000ms ease-in-out;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
   overflow: hidden;
@@ -442,7 +438,7 @@ p4 {
   background-color: white;
   border-radius: 15px;
   font-size: 15px;
-  transition: transform 2000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
 }
 
 .menu__course__opts__1:hover .menu__course__opts__1__check__mark {
@@ -464,7 +460,7 @@ p4 {
   position: relative;
   cursor: pointer;
   text-overflow: ellipsis;
-  transition: all 350ms linear;
+  transition: all 1000ms linear;
 }
 
 .menu__course__opts__2 {
@@ -526,50 +522,6 @@ p4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
-
-@keyframes choose {
-  0% {
-    grid-template-columns: 240px 40px 60px;
-  }
-  5% {
-    grid-template-columns: 232px 40px 60px;
-  }
-  10% {
-    grid-template-columns: 225px 40px 60px;
-  }
-  15% {
-    grid-template-columns: 217px 40px 60px;
-  }
-  20% {
-    grid-template-columns: 210px 40px 60px;
-  }
-  25% {
-    grid-template-columns: 202px 40px 60px;
-  }
-  30% {
-    grid-template-columns: 195px 40px 60px;
-  }
-  35% {
-    grid-template-columns: 187px 40px 60px;
-  }
-  40% {
-    grid-template-columns: 180px 40px 60px;
-  }
-  100% {
-    grid-template-columns: 180px 40px 60px;
-  }
-  /*
-    60% {grid-template-columns: 180px 40px 60px;}
-    65% {grid-template-columns: 187px 40px 60px;}
-    70% {grid-template-columns: 195px 40px 60px;}
-    75% {grid-template-columns: 202px 40px 60px;}
-    80% {grid-template-columns: 210px 40px 60px;}
-    85% {grid-template-columns: 217px 40px 60px;}
-    90% {grid-template-columns: 225px 40px 60px;}
-    95% {grid-template-columns: 232px 40px 60px;}
-    100% {grid-template-columns: 240px 40px 60px;}
-*/
 }
 
 @keyframes slidein {

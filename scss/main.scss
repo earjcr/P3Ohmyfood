@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    
 }   
 header {
     color: $textcolor;
@@ -53,7 +54,6 @@ footer {
         background-color: $backgroundcolor1;      
     }
 }
-
 .navbox {
     display: flex;
     flex-direction: row;
@@ -74,7 +74,7 @@ footer {
             justify-content:start;
             font-family: 'Roboto', sans-serif;
             height: 30px;
-            width: 310px;
+            width: 320px;
             background-color: $backgroundcolor3;
             padding: 5px;
             color: black;
@@ -300,7 +300,6 @@ p4 {
         }
     }
 }
-
 .menu {
     display: flex;
     flex-direction: row;
@@ -351,13 +350,13 @@ p4 {
                     grid-template-rows: 20px 15px;
                     width: 240px;
                     padding: 5px 0 5px 0;
-                    transition: width 2000ms ease-in-out;
+                    transition: width 1000ms ease-in-out;
                 }
                 &__price {
                     width: 40px;
                     text-align: center;
                     right: 0;
-                    transition: right 2000ms ease-in-out;
+                    transition: right 1000ms ease-in-out;
                 }
                 &__check {
                     position: relative;
@@ -365,7 +364,7 @@ p4 {
                     width: 60px;
                     right: 0px;
                     text-align: center;
-                    transition: right 2000ms ease-in-out;
+                    transition: right 1000ms ease-in-out;
                     border-radius: 0 15px 15px 0;
                     background-color: $tertiary-color;
                     overflow: hidden;
@@ -377,7 +376,7 @@ p4 {
                         color: $tertiary-color;
                         background-color: white;                     border-radius: 15px;
                         font-size: 15px;
-                        transition: transform 2000ms ease-in-out;
+                        transition: transform 1000ms ease-in-out;
                     }
                 }
                 &:hover &__check__mark {
@@ -391,16 +390,12 @@ p4 {
                     position: relative;
                     right: 60px;
                 }
-               /* &:hover {
-                    position: relative;
-                    grid-template-columns: 180px 40px 60px;
-                }*/
                 &:hover &__plate {
                     width: 180px;
                     position: relative;
                     cursor: pointer;
                     text-overflow: ellipsis;
-                    transition: all 350ms linear;
+                    transition: all 1000ms linear;
                 }
             }
             &__2 {
@@ -461,30 +456,6 @@ p4 {
     white-space: nowrap;
 }
 
-@keyframes choose {
-    0% {grid-template-columns: 240px 40px 60px;}
-    5% {grid-template-columns: 232px 40px 60px;}
-    10% {grid-template-columns: 225px 40px 60px;}
-    15% {grid-template-columns: 217px 40px 60px;}
-    20% {grid-template-columns: 210px 40px 60px;}
-
-    25% {grid-template-columns: 202px 40px 60px;}
-    30% {grid-template-columns: 195px 40px 60px;}
-    35% {grid-template-columns: 187px 40px 60px;}
-    40% {grid-template-columns: 180px 40px 60px;}
-   100% {grid-template-columns: 180px 40px 60px;}
-/*
-    60% {grid-template-columns: 180px 40px 60px;}
-    65% {grid-template-columns: 187px 40px 60px;}
-    70% {grid-template-columns: 195px 40px 60px;}
-    75% {grid-template-columns: 202px 40px 60px;}
-    80% {grid-template-columns: 210px 40px 60px;}
-    85% {grid-template-columns: 217px 40px 60px;}
-    90% {grid-template-columns: 225px 40px 60px;}
-    95% {grid-template-columns: 232px 40px 60px;}
-    100% {grid-template-columns: 240px 40px 60px;}
-*/  
-}
 @keyframes slidein {
     0% {opacity: 0;}
     25% {opacity: 0;
