@@ -1,50 +1,12 @@
 @import './resets';
 @import './variables';
 
-
 body {
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-
-    //animation: fadeInAnimation ease 3s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
-
-//#overlay {
-//    position: fixed;  /* Sit on top of the page content */
-//    display: none;    /* Hidden by default */
-//    width: 100%;      /* Full width (cover the whole page) */
-//    height: 100%;     /* Full height (cover the whole page) */
-//    top: 0;
-//    left: 0;
-//    right: 0;
-//    bottom: 0;
-//    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-//    z-index: 2;       /* Specify a stack order in case you're using a different order for other elements */
-//    cursor: pointer;  /* Add a pointer on hover */
-    .loader {
-        position: fixed;
-        border: 16px solid #f3f3f3; 
-        border-top: 16px solid #3498db; 
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin 1s linear 2;
-    }
-//}
-    
-@keyframes spin {
-    0% { transform: rotate(0deg); z-index: 2;}
-    100% { transform: rotate(360deg); z-index: 0;}    }
-} 
-@keyframes fadeInAnimation { 
-    0%   { opacity: 0; } 
-    33%  { opacity: 0; } 
-    66%  { opacity: 0; } 
-    100% { opacity: 1; } 
-}  
+}
 header {
     color: $textcolor;
     background: $backgroundcolor1;
@@ -63,6 +25,55 @@ footer {
     font-family: 'Roboto', sans-serif;
     background-color: $backgroundcolor4;
 }
+
+.loader1 {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 1;
+    border: 1px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid $primary-color; /* Blue */
+    border-right: 8px solid $primary-color; /* Blue */
+    border-bottom: 16px solid $primary-color; /* Blue */
+    border-radius: 50%;
+    width: 240px;
+    height: 120px;
+    animation: spin 1s linear 3;
+}
+.loader2 {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    z-index: 1;
+    border: 1px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid $secondary-color; /* Blue */
+    border-right: 8px solid $secondary-color; /* Blue */
+    border-bottom: 16px solid $secondary-color; /* Blue */
+    border-radius: 50%;
+    width: 240px;
+    height: 120px;
+    animation: spin .75s linear 3;
+}
+.loader3 {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    z-index: 1;
+    border: 1px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid $tertiary-color; /* Blue */
+    border-right: 8px solid $tertiary-color; /* Blue */
+    border-bottom: 16px solid $tertiary-color; /* Blue */
+    border-radius: 50%;
+    width: 240px;
+    height: 120px;
+    animation: spin .5s linear 3;
+}
+   
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
 
 .title {
     font-family: 'Roboto', sans-serif;
@@ -297,7 +308,7 @@ p4 {
     height: 220px;
     &__pic {
         width: 100%;
-        height:190px;
+        height:210px;
         object-fit: cover;
         object-position: 50% 55%;
         float: inline-start;
@@ -306,7 +317,7 @@ p4 {
         display: grid;
         grid-template-columns: 240px 20px 20px;
         position: relative;
-        bottom: 20px;
+        bottom: 40px;
         align-items: center;
         font-family: 'Shrikhand';
         text-align: left;
@@ -315,6 +326,7 @@ p4 {
         border: none;
         margin-left: 0px;
         min-width: 280px;
+        max-width: 340px;
         height: 50px;
         padding: 20px;
         border-radius: 25px 25px 0 0;
@@ -411,7 +423,8 @@ p4 {
                         text-align: center;
                         padding: 5px;
                         color: $tertiary-color;
-                        background-color: white;                     border-radius: 15px;
+                        background-color: white;
+                        border-radius: 15px;
                         font-size: 15px;
                         transition: transform 1000ms ease-in-out;
                     }
@@ -437,51 +450,206 @@ p4 {
             }
             &__2 {
                 display: grid;
-                grid-template-columns: 245px 25px;
-                align-items: flex-end;
+                grid-template-columns: 240px 40px 60px;
+                align-items: center;
                 height: 50px;
+                width: 290px;
                 font-size: .8em;
-                justify-content: center;
                 border: none;
-                padding: 10px;
+                padding: 0 0 0 10px;
                 border-radius: 15px;
+                overflow: hidden;
                 background-color: $backgroundcolor1;
                 animation: slidein 3000ms -400ms;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &:hover {
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                &__plate {
+                    display: grid;
+                    grid-template-rows: 20px 15px;
+                    width: 240px;
+                    padding: 5px 0 5px 0;
+                    transition: width 1000ms ease-in-out;
+                }
+                &__price {
+                    width: 40px;
+                    text-align: center;
+                    right: 0;
+                    transition: right 1000ms ease-in-out;
+                }
+                &__check {
+                    position: relative;
+                    height: 50px;
+                    width: 60px;
+                    right: 0px;
+                    text-align: center;
+                    transition: right 1000ms ease-in-out;
+                    border-radius: 0 15px 15px 0;
+                    background-color: $tertiary-color;
+                    overflow: hidden;
+                    &__mark {
+                        position: relative;
+                        top: 13px;
+                        text-align: center;
+                        padding: 5px;
+                        color: $tertiary-color;
+                        background-color: white;
+                        border-radius: 15px;
+                        font-size: 15px;
+                        transition: transform 1000ms ease-in-out;
+                    }
+                }
+                &:hover &__check__mark {
+                    transform: rotate(360deg);
+                }
+                &:hover &__check {
+                    position: relative;
+                    right: 60px;
+                }
+                &:hover &__price {
+                    position: relative;
+                    right: 60px;
+                }
+                &:hover &__plate {
+                    width: 180px;
+                    position: relative;
+                    cursor: pointer;
+                    text-overflow: ellipsis;
+                    transition: all 1000ms linear;
                 }
             }
             &__3 {
                 display: grid;
-                grid-template-columns: 245px 25px;
-                align-items: flex-end;
+                grid-template-columns: 240px 40px 60px;
+                align-items: center;
                 height: 50px;
+                width: 290px;
                 font-size: .8em;
-                justify-content: center;
                 border: none;
-                padding: 10px;
+                padding: 0 0 0 10px;
                 border-radius: 15px;
+                overflow: hidden;
                 background-color: $backgroundcolor1;
                 animation: slidein 3000ms -200ms;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &:hover {
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                &__plate {
+                    display: grid;
+                    grid-template-rows: 20px 15px;
+                    width: 240px;
+                    padding: 5px 0 5px 0;
+                    transition: width 1000ms ease-in-out;
+                }
+                &__price {
+                    width: 40px;
+                    text-align: center;
+                    right: 0;
+                    transition: right 1000ms ease-in-out;
+                }
+                &__check {
+                    position: relative;
+                    height: 50px;
+                    width: 60px;
+                    right: 0px;
+                    text-align: center;
+                    transition: right 1000ms ease-in-out;
+                    border-radius: 0 15px 15px 0;
+                    background-color: $tertiary-color;
+                    overflow: hidden;
+                    &__mark {
+                        position: relative;
+                        top: 13px;
+                        text-align: center;
+                        padding: 5px;
+                        color: $tertiary-color;
+                        background-color: white;
+                        border-radius: 15px;
+                        font-size: 15px;
+                        transition: transform 1000ms ease-in-out;
+                    }
+                }
+                &:hover &__check__mark {
+                    transform: rotate(360deg);
+                }
+                &:hover &__check {
+                    position: relative;
+                    right: 60px;
+                }
+                &:hover &__price {
+                    position: relative;
+                    right: 60px;
+                }
+                &:hover &__plate {
+                    width: 180px;
+                    position: relative;
+                    cursor: pointer;
+                    text-overflow: ellipsis;
+                    transition: all 1000ms linear;
                 }
             }
             &__4 {
-                width: 290px;
+                display: grid;
+                grid-template-columns: 240px 40px 60px;
+                align-items: center;
                 height: 50px;
+                width: 290px;
                 font-size: .8em;
-                justify-content: center;
                 border: none;
-                padding: 10px;
+                padding: 0 0 0 10px;
                 border-radius: 15px;
+                overflow: hidden;
                 background-color: $backgroundcolor1;
-                animation: slidein 3000ms 000ms;
+                animation: slidein 3000ms   0ms;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &:hover {
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                &__plate {
+                    display: grid;
+                    grid-template-rows: 20px 15px;
+                    width: 240px;
+                    padding: 5px 0 5px 0;
+                    transition: width 1000ms ease-in-out;
+                }
+                &__price {
+                    width: 40px;
+                    text-align: center;
+                    right: 0;
+                    transition: right 1000ms ease-in-out;
+                }
+                &__check {
+                    position: relative;
+                    height: 50px;
+                    width: 60px;
+                    right: 0px;
+                    text-align: center;
+                    transition: right 1000ms ease-in-out;
+                    border-radius: 0 15px 15px 0;
+                    background-color: $tertiary-color;
+                    overflow: hidden;
+                    &__mark {
+                        position: relative;
+                        top: 13px;
+                        text-align: center;
+                        padding: 5px;
+                        color: $tertiary-color;
+                        background-color: white;
+                        border-radius: 15px;
+                        font-size: 15px;
+                        transition: transform 1000ms ease-in-out;
+                    }
+                }
+                &:hover &__check__mark {
+                    transform: rotate(360deg);
+                }
+                &:hover &__check {
+                    position: relative;
+                    right: 60px;
+                }
+                &:hover &__price {
+                    position: relative;
+                    right: 60px;
+                }
+                &:hover &__plate {
+                    width: 180px;
+                    position: relative;
+                    cursor: pointer;
+                    text-overflow: ellipsis;
+                    transition: all 1000ms linear;
                 }
             }
         }
