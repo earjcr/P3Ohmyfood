@@ -26,55 +26,81 @@ footer {
     background-color: $backgroundcolor4;
 }
 
+.loaded,
+.location {
+    animation: fade-in 2000ms ease-in;
+}
+
 .loader1 {
     position: absolute;
-    left: 35%;
+    z-index: 3000;
+    font-family: Shrikhand;
+    font-size: 4em;
+    color: $tertiary-color;
+    left: 55%;
     top: 50%;
-    z-index: 1;
-    border: 1px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid $primary-color; /* Blue */
-    border-right: 8px solid $primary-color; /* Blue */
-    border-bottom: 16px solid $primary-color; /* Blue */
+    border:        16px solid $tertiary-color;
+    border-top:    16px solid $backgroundcolor3;
+    border-bottom: 16px solid $backgroundcolor3;
     border-radius: 50%;
-    width: 240px;
-    height: 120px;
-    animation: spin 1s linear 3;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 3000ms linear 1;
+    opacity: 0;
 }
 .loader2 {
     position: absolute;
-    left: 40%;
-    top: 50%;
-    z-index: 1;
-    border: 1px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid $secondary-color; /* Blue */
-    border-right: 8px solid $secondary-color; /* Blue */
-    border-bottom: 16px solid $secondary-color; /* Blue */
+    z-index: 3000;
+    font-family: Shrikhand;
+    font-size: 4em;
+    color: $primary-color;
+    left: 50%;
+    top: 40%;
+    border:        16px solid $primary-color;
+    border-top:    16px solid $backgroundcolor3;
+    border-bottom: 16px solid $backgroundcolor3;
     border-radius: 50%;
-    width: 240px;
-    height: 120px;
-    animation: spin .75s linear 3;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 3000ms linear 1;
+    opacity: 0;
 }
 .loader3 {
     position: absolute;
+    z-index: 3000;
+    font-family: Shrikhand;
+    font-size: 4em;
+    color: $secondary-color;
     left: 45%;
-    top: 50%;
-    z-index: 1;
-    border: 1px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid $tertiary-color; /* Blue */
-    border-right: 8px solid $tertiary-color; /* Blue */
-    border-bottom: 16px solid $tertiary-color; /* Blue */
+    top: 30%;
+    border:        16px solid $secondary-color;
+    border-top:    16px solid $backgroundcolor3;
+    border-bottom: 16px solid $backgroundcolor3;
     border-radius: 50%;
-    width: 240px;
-    height: 120px;
-    animation: spin .5s linear 3;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 3000ms linear 1;
+    opacity: 0;
 }
-   
+
+@keyframes fade-in {
+    0%  { opacity: 0;   }
+    70% { opacity: 0;    }
+    80% { opacity: 0.7;  }
+    90% { opacity: 0.9; }
+    100%{ opacity: 1;    }
+}
+
 @keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
+    0% {   transform: translateX(-50%) rotate(0deg);
+           opacity: 1; }
+    30% {  transform: translateX(-50%) rotate(120deg);
+           opacity: 1; }
+    60% {  transform: translateX(-50%) rotate(240deg);
+           opacity: 0.1; }
+    100% { transform: translateX(-50%) rotate(360deg);
+           opacity: 0; }
 }
-
-
 .title {
     font-family: 'Roboto', sans-serif;
     color: $textcolor;
