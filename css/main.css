@@ -454,16 +454,13 @@ p4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 5px;
-  /*&__space {
-            padding: 0px;*/
+  grid-gap: 10px;
 }
 
 .eatery__box__rest {
   border: none;
   background-color: white;
   width: 280px;
-  height: 250px;
   border-radius: 15px;
 }
 
@@ -474,7 +471,6 @@ p4 {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
-  float: inline-start;
   border-radius: 15px 15px 0 0;
 }
 
@@ -491,7 +487,7 @@ p4 {
   margin-left: 0px;
   padding: 2px 5px 0px 5px;
   color: black;
-  width: 270px;
+  width: 280px;
   height: 50px;
 }
 
@@ -499,7 +495,7 @@ p4 {
   display: block;
   position: relative;
   width: 220px;
-  height: 50px;
+  height: 49px;
   text-align: left;
 }
 

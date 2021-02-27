@@ -292,23 +292,17 @@ p4 {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        grid-gap: 5px;
-        /*&__space {
-            padding: 0px;*/
+        grid-gap: 10px;
         &__rest {
             border: none;
             background-color: white;
             width: 280px;
-            height: 250px;
             border-radius: 15px;
             &__pic {
                 width: 280px;
-                height:200px;
-                -o-object-fit: cover;
+                height: 200px;
                 object-fit: cover;
-                -o-object-position: 50% 50%;
                 object-position: 50% 50%;
-                float: inline-start;
                 border-radius: 15px 15px 0 0;
             }
             &__txt {
@@ -320,14 +314,13 @@ p4 {
                 margin-left: 0px;
                 padding: 2px 5px 0px 5px;
                 color: black;
-                width: 270px;
+                width: 280px;
                 height: 50px;
                 &__meld {
                     display: block;
                     position: relative;
                     width: 220px;
-                    height: 50px;
-                    text-align: left;
+                    height: 49px;                        text-align: left;
                 }
                 &__heart {
                     font-size: 21px;
