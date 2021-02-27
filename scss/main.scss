@@ -264,11 +264,6 @@ footer {
         }
     }
 }
-.spacebub {
-    height: 1em;
-    width: 1em;
-    color: red;
-}
 p2 {
     font-size: 1.0em;
     font-weight: 700;
@@ -297,7 +292,9 @@ p4 {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        grid-gap: 20px;
+        grid-gap: 5px;
+        /*&__space {
+            padding: 0px;*/
         &__rest {
             border: none;
             background-color: white;
@@ -308,9 +305,9 @@ p4 {
                 width: 280px;
                 height:200px;
                 -o-object-fit: cover;
-                   object-fit: cover;
+                object-fit: cover;
                 -o-object-position: 50% 50%;
-                   object-position: 50% 50%;
+                object-position: 50% 50%;
                 float: inline-start;
                 border-radius: 15px 15px 0 0;
             }
@@ -438,281 +435,293 @@ p4 {
             flex-wrap: wrap;
             justify-content: center;
             justify-content: space-around;
-            grid-gap: 10px;
+            grid-gap: 2px;
             &__1 {
-                display: grid;
-                grid-template-columns: 240px 40px 60px;
-                align-items: center;
-                height: 50px;
-                width: 290px;
-                font-size: .8em;
-                border: none;
-                padding: 0 0 0 10px;
-                border-radius: 15px;
-                overflow: hidden;
-                background-color: $backgroundcolor1;
-                -webkit-animation: slidein 3000ms -600ms;
-                        animation: slidein 3000ms -600ms;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &__plate {
+                padding: 5px;
+                &__space {
                     display: grid;
-                    grid-template-rows: 20px 15px;
-                    width: 240px;
-                    padding: 5px 0 5px 0;
-                    transition: width 1000ms ease-in-out;
-                }
-                &__price {
-                    width: 40px;
-                    text-align: center;
-                    right: 0;
-                    transition: right 1000ms ease-in-out;
-                }
-                &__check {
-                    position: relative;
+                    grid-template-columns: 240px 40px 60px;
+                    align-items: center;
                     height: 50px;
-                    width: 60px;
-                    right: 0px;
-                    text-align: center;
-                    transition: right 1000ms ease-in-out;
-                    border-radius: 0 15px 15px 0;
-                    background-color: $tertiary-color;
+                    width: 290px;
+                    font-size: .8em;
+                    border: none;
+                    padding: 0 0 0 10px;
+                    border-radius: 15px;
                     overflow: hidden;
-                    &__mark {
-                        position: relative;
-                        top: 13px;
+                    background-color: $backgroundcolor1;
+                    -webkit-animation: slidein 3000ms -600ms;
+                            animation: slidein 3000ms -600ms;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    &__plate {
+                        display: grid;
+                        grid-template-rows: 20px 15px;
+                        width: 240px;
+                        padding: 5px 0 5px 0;
+                        transition: width 1000ms ease-in-out;
+                    }
+                    &__price {
+                        width: 40px;
                         text-align: center;
-                        padding: 5px;
-                        color: $tertiary-color;
-                        background-color: white;
-                        border-radius: 15px;
-                        font-size: 15px;
-                        transition: transform 1000ms ease-in-out;
+                        right: 0;
+                        transition: right 1000ms ease-in-out;
+                    }
+                    &__check {
+                        position: relative;
+                        height: 50px;
+                        width: 60px;
+                        right: 0px;
+                        text-align: center;
+                        transition: right 1000ms ease-in-out;
+                        border-radius: 0 15px 15px 0;
+                        background-color: $tertiary-color;
+                        overflow: hidden;
+                        &__mark {
+                            position: relative;
+                            top: 13px;
+                            text-align: center;
+                            padding: 5px;
+                            color: $tertiary-color;
+                            background-color: white;
+                            border-radius: 15px;
+                            font-size: 15px;
+                            transition: transform 1000ms ease-in-out;
+                        }
+                    }
+                    &:hover &__check__mark {
+                        transform: rotate(360deg);
+                    }
+                    &:hover &__check {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__price {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__plate {
+                        width: 180px;
+                        position: relative;
+                        cursor: pointer;
+                        text-overflow: ellipsis;
+                        transition: all 1000ms linear;
                     }
                 }
-                &:hover &__check__mark {
-                    transform: rotate(360deg);
-                }
-                &:hover &__check {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__price {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__plate {
-                    width: 180px;
-                    position: relative;
-                    cursor: pointer;
-                    text-overflow: ellipsis;
-                    transition: all 1000ms linear;
-                }
-            }
+            }    
             &__2 {
-                display: grid;
-                grid-template-columns: 240px 40px 60px;
-                align-items: center;
-                height: 50px;
-                width: 290px;
-                font-size: .8em;
-                border: none;
-                padding: 0 0 0 10px;
-                border-radius: 15px;
-                overflow: hidden;
-                background-color: $backgroundcolor1;
-                -webkit-animation: slidein 3000ms -400ms;
-                        animation: slidein 3000ms -400ms;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &__plate {
+                padding: 5px;
+                &__space {
                     display: grid;
-                    grid-template-rows: 20px 15px;
-                    width: 240px;
-                    padding: 5px 0 5px 0;
-                    transition: width 1000ms ease-in-out;
-                }
-                &__price {
-                    width: 40px;
-                    text-align: center;
-                    right: 0;
-                    transition: right 1000ms ease-in-out;
-                }
-                &__check {
-                    position: relative;
+                    grid-template-columns: 240px 40px 60px;
+                    align-items: center;
                     height: 50px;
-                    width: 60px;
-                    right: 0px;
-                    text-align: center;
-                    transition: right 1000ms ease-in-out;
-                    border-radius: 0 15px 15px 0;
-                    background-color: $tertiary-color;
+                    width: 290px;
+                    font-size: .8em;
+                    border: none;
+                    padding: 0 0 0 10px;
+                    border-radius: 15px;
                     overflow: hidden;
-                    &__mark {
-                        position: relative;
-                        top: 13px;
-                        text-align: center;
-                        padding: 5px;
-                        color: $tertiary-color;
-                        background-color: white;
-                        border-radius: 15px;
-                        font-size: 15px;
-                        transition: transform 1000ms ease-in-out;
+                    background-color: $backgroundcolor1;
+                    -webkit-animation: slidein 3000ms -400ms;
+                            animation: slidein 3000ms -400ms;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    &__plate {
+                        display: grid;
+                        grid-template-rows: 20px 15px;
+                        width: 240px;
+                        padding: 5px 0 5px 0;
+                        transition: width 1000ms ease-in-out;
                     }
-                }
-                &:hover &__check__mark {
-                    transform: rotate(360deg);
-                }
-                &:hover &__check {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__price {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__plate {
-                    width: 180px;
-                    position: relative;
-                    cursor: pointer;
-                    text-overflow: ellipsis;
-                    transition: all 1000ms linear;
+                    &__price {
+                        width: 40px;
+                        text-align: center;
+                        right: 0;
+                        transition: right 1000ms ease-in-out;
+                    }
+                    &__check {
+                        position: relative;
+                        height: 50px;
+                        width: 60px;
+                        right: 0px;
+                        text-align: center;
+                        transition: right 1000ms ease-in-out;
+                        border-radius: 0 15px 15px 0;
+                        background-color: $tertiary-color;
+                        overflow: hidden;
+                        &__mark {
+                            position: relative;
+                            top: 13px;
+                            text-align: center;
+                            padding: 5px;
+                            color: $tertiary-color;
+                            background-color: white;
+                            border-radius: 15px;
+                            font-size: 15px;
+                            transition: transform 1000ms ease-in-out;
+                        }
+                    }
+                    &:hover &__check__mark {
+                        transform: rotate(360deg);
+                    }
+                    &:hover &__check {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__price {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__plate {
+                        width: 180px;
+                        position: relative;
+                        cursor: pointer;
+                        text-overflow: ellipsis;
+                        transition: all 1000ms linear;
+                    }
                 }
             }
             &__3 {
-                display: grid;
-                grid-template-columns: 240px 40px 60px;
-                align-items: center;
-                height: 50px;
-                width: 290px;
-                font-size: .8em;
-                border: none;
-                padding: 0 0 0 10px;
-                border-radius: 15px;
-                overflow: hidden;
-                background-color: $backgroundcolor1;
-                -webkit-animation: slidein 3000ms -200ms;
-                        animation: slidein 3000ms -200ms;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &__plate {
+                padding: 5px;
+                &__space {
                     display: grid;
-                    grid-template-rows: 20px 15px;
-                    width: 240px;
-                    padding: 5px 0 5px 0;
-                    transition: width 1000ms ease-in-out;
-                }
-                &__price {
-                    width: 40px;
-                    text-align: center;
-                    right: 0;
-                    transition: right 1000ms ease-in-out;
-                }
-                &__check {
-                    position: relative;
+                    grid-template-columns: 240px 40px 60px;
+                    align-items: center;
                     height: 50px;
-                    width: 60px;
-                    right: 0px;
-                    text-align: center;
-                    transition: right 1000ms ease-in-out;
-                    border-radius: 0 15px 15px 0;
-                    background-color: $tertiary-color;
+                    width: 290px;
+                    font-size: .8em;
+                    border: none;
+                    padding: 0 0 0 10px;
+                    border-radius: 15px;
                     overflow: hidden;
-                    &__mark {
-                        position: relative;
-                        top: 13px;
-                        text-align: center;
-                        padding: 5px;
-                        color: $tertiary-color;
-                        background-color: white;
-                        border-radius: 15px;
-                        font-size: 15px;
-                        transition: transform 1000ms ease-in-out;
+                    background-color: $backgroundcolor1;
+                    -webkit-animation: slidein 3000ms -200ms;
+                            animation: slidein 3000ms -200ms;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    &__plate {
+                        display: grid;
+                        grid-template-rows: 20px 15px;
+                        width: 240px;
+                        padding: 5px 0 5px 0;
+                        transition: width 1000ms ease-in-out;
                     }
-                }
-                &:hover &__check__mark {
-                    transform: rotate(360deg);
-                }
-                &:hover &__check {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__price {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__plate {
-                    width: 180px;
-                    position: relative;
-                    cursor: pointer;
-                    text-overflow: ellipsis;
-                    transition: all 1000ms linear;
+                    &__price {
+                        width: 40px;
+                        text-align: center;
+                        right: 0;
+                        transition: right 1000ms ease-in-out;
+                    }
+                    &__check {
+                        position: relative;
+                        height: 50px;
+                        width: 60px;
+                        right: 0px;
+                        text-align: center;
+                        transition: right 1000ms ease-in-out;
+                        border-radius: 0 15px 15px 0;
+                        background-color: $tertiary-color;
+                        overflow: hidden;
+                        &__mark {
+                            position: relative;
+                            top: 13px;
+                            text-align: center;
+                            padding: 5px;
+                            color: $tertiary-color;
+                            background-color: white;
+                            border-radius: 15px;
+                            font-size: 15px;
+                            transition: transform 1000ms ease-in-out;
+                        }
+                    }
+                    &:hover &__check__mark {
+                        transform: rotate(360deg);
+                    }
+                    &:hover &__check {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__price {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__plate {
+                        width: 180px;
+                        position: relative;
+                        cursor: pointer;
+                        text-overflow: ellipsis;
+                        transition: all 1000ms linear;
+                    }
                 }
             }
             &__4 {
-                display: grid;
-                grid-template-columns: 240px 40px 60px;
-                align-items: center;
-                height: 50px;
-                width: 290px;
-                font-size: .8em;
-                border: none;
-                padding: 0 0 0 10px;
-                border-radius: 15px;
-                overflow: hidden;
-                background-color: $backgroundcolor1;
-                -webkit-animation: slidein 3000ms   0ms;
-                        animation: slidein 3000ms   0ms;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &__plate {
+                padding: 5px;
+                &__space {
                     display: grid;
-                    grid-template-rows: 20px 15px;
-                    width: 240px;
-                    padding: 5px 0 5px 0;
-                    transition: width 1000ms ease-in-out;
-                }
-                &__price {
-                    width: 40px;
-                    text-align: center;
-                    right: 0;
-                    transition: right 1000ms ease-in-out;
-                }
-                &__check {
-                    position: relative;
+                    grid-template-columns: 240px 40px 60px;
+                    align-items: center;
                     height: 50px;
-                    width: 60px;
-                    right: 0px;
-                    text-align: center;
-                    transition: right 1000ms ease-in-out;
-                    border-radius: 0 15px 15px 0;
-                    background-color: $tertiary-color;
+                    width: 290px;
+                    font-size: .8em;
+                    border: none;
+                    padding: 0 0 0 10px;
+                    border-radius: 15px;
                     overflow: hidden;
-                    &__mark {
-                        position: relative;
-                        top: 13px;
-                        text-align: center;
-                        padding: 5px;
-                        color: $tertiary-color;
-                        background-color: white;
-                        border-radius: 15px;
-                        font-size: 15px;
-                        transition: transform 1000ms ease-in-out;
+                    background-color: $backgroundcolor1;
+                    -webkit-animation: slidein 3000ms   0ms;
+                            animation: slidein 3000ms   0ms;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    &__plate {
+                        display: grid;
+                        grid-template-rows: 20px 15px;
+                        width: 240px;
+                        padding: 5px 0 5px 0;
+                        transition: width 1000ms ease-in-out;
                     }
-                }
-                &:hover &__check__mark {
-                    transform: rotate(360deg);
-                }
-                &:hover &__check {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__price {
-                    position: relative;
-                    right: 60px;
-                }
-                &:hover &__plate {
-                    width: 180px;
-                    position: relative;
-                    cursor: pointer;
-                    text-overflow: ellipsis;
-                    transition: all 1000ms linear;
+                    &__price {
+                        width: 40px;
+                        text-align: center;
+                        right: 0;
+                        transition: right 1000ms ease-in-out;
+                    }
+                    &__check {
+                        position: relative;
+                        height: 50px;
+                        width: 60px;
+                        right: 0px;
+                        text-align: center;
+                        transition: right 1000ms ease-in-out;
+                        border-radius: 0 15px 15px 0;
+                        background-color: $tertiary-color;
+                        overflow: hidden;
+                        &__mark {
+                            position: relative;
+                            top: 13px;
+                            text-align: center;
+                            padding: 5px;
+                            color: $tertiary-color;
+                            background-color: white;
+                            border-radius: 15px;
+                            font-size: 15px;
+                            transition: transform 1000ms ease-in-out;
+                        }
+                    }
+                    &:hover &__check__mark {
+                        transform: rotate(360deg);
+                    }
+                    &:hover &__check {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__price {
+                        position: relative;
+                        right: 60px;
+                    }
+                    &:hover &__plate {
+                        width: 180px;
+                        position: relative;
+                        cursor: pointer;
+                        text-overflow: ellipsis;
+                        transition: all 1000ms linear;
+                    }
                 }
             }
         }

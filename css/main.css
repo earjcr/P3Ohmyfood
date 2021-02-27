@@ -408,12 +408,6 @@ footer {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.spacebub {
-  height: 1em;
-  width: 1em;
-  color: red;
-}
-
 p2 {
   font-size: 1.0em;
   font-weight: 700;
@@ -460,7 +454,9 @@ p4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 20px;
+  grid-gap: 5px;
+  /*&__space {
+            padding: 0px;*/
 }
 
 .eatery__box__rest {
@@ -656,10 +652,14 @@ p4 {
           justify-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  grid-gap: 10px;
+  grid-gap: 2px;
 }
 
 .menu__course__opts__1 {
+  padding: 5px;
+}
+
+.menu__course__opts__1__space {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 40px 60px;
@@ -681,7 +681,7 @@ p4 {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.menu__course__opts__1__plate {
+.menu__course__opts__1__space__plate {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20px 15px;
@@ -693,7 +693,7 @@ p4 {
   transition: width 1000ms ease-in-out;
 }
 
-.menu__course__opts__1__price {
+.menu__course__opts__1__space__price {
   width: 40px;
   text-align: center;
   right: 0;
@@ -702,7 +702,7 @@ p4 {
   transition: right 1000ms ease-in-out;
 }
 
-.menu__course__opts__1__check {
+.menu__course__opts__1__space__check {
   position: relative;
   height: 50px;
   width: 60px;
@@ -716,7 +716,7 @@ p4 {
   overflow: hidden;
 }
 
-.menu__course__opts__1__check__mark {
+.menu__course__opts__1__space__check__mark {
   position: relative;
   top: 13px;
   text-align: center;
@@ -732,23 +732,23 @@ p4 {
   transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
-.menu__course__opts__1:hover .menu__course__opts__1__check__mark {
+.menu__course__opts__1__space:hover .menu__course__opts__1__space__check__mark {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.menu__course__opts__1:hover .menu__course__opts__1__check {
+.menu__course__opts__1__space:hover .menu__course__opts__1__space__check {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__1:hover .menu__course__opts__1__price {
+.menu__course__opts__1__space:hover .menu__course__opts__1__space__price {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__1:hover .menu__course__opts__1__plate {
+.menu__course__opts__1__space:hover .menu__course__opts__1__space__plate {
   width: 180px;
   position: relative;
   cursor: pointer;
@@ -760,6 +760,10 @@ p4 {
 }
 
 .menu__course__opts__2 {
+  padding: 5px;
+}
+
+.menu__course__opts__2__space {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 40px 60px;
@@ -781,7 +785,7 @@ p4 {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.menu__course__opts__2__plate {
+.menu__course__opts__2__space__plate {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20px 15px;
@@ -793,7 +797,7 @@ p4 {
   transition: width 1000ms ease-in-out;
 }
 
-.menu__course__opts__2__price {
+.menu__course__opts__2__space__price {
   width: 40px;
   text-align: center;
   right: 0;
@@ -802,7 +806,7 @@ p4 {
   transition: right 1000ms ease-in-out;
 }
 
-.menu__course__opts__2__check {
+.menu__course__opts__2__space__check {
   position: relative;
   height: 50px;
   width: 60px;
@@ -816,7 +820,7 @@ p4 {
   overflow: hidden;
 }
 
-.menu__course__opts__2__check__mark {
+.menu__course__opts__2__space__check__mark {
   position: relative;
   top: 13px;
   text-align: center;
@@ -832,23 +836,23 @@ p4 {
   transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
-.menu__course__opts__2:hover .menu__course__opts__2__check__mark {
+.menu__course__opts__2__space:hover .menu__course__opts__2__space__check__mark {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.menu__course__opts__2:hover .menu__course__opts__2__check {
+.menu__course__opts__2__space:hover .menu__course__opts__2__space__check {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__2:hover .menu__course__opts__2__price {
+.menu__course__opts__2__space:hover .menu__course__opts__2__space__price {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__2:hover .menu__course__opts__2__plate {
+.menu__course__opts__2__space:hover .menu__course__opts__2__space__plate {
   width: 180px;
   position: relative;
   cursor: pointer;
@@ -860,6 +864,10 @@ p4 {
 }
 
 .menu__course__opts__3 {
+  padding: 5px;
+}
+
+.menu__course__opts__3__space {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 40px 60px;
@@ -881,7 +889,7 @@ p4 {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.menu__course__opts__3__plate {
+.menu__course__opts__3__space__plate {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20px 15px;
@@ -893,7 +901,7 @@ p4 {
   transition: width 1000ms ease-in-out;
 }
 
-.menu__course__opts__3__price {
+.menu__course__opts__3__space__price {
   width: 40px;
   text-align: center;
   right: 0;
@@ -902,7 +910,7 @@ p4 {
   transition: right 1000ms ease-in-out;
 }
 
-.menu__course__opts__3__check {
+.menu__course__opts__3__space__check {
   position: relative;
   height: 50px;
   width: 60px;
@@ -916,7 +924,7 @@ p4 {
   overflow: hidden;
 }
 
-.menu__course__opts__3__check__mark {
+.menu__course__opts__3__space__check__mark {
   position: relative;
   top: 13px;
   text-align: center;
@@ -932,23 +940,23 @@ p4 {
   transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
-.menu__course__opts__3:hover .menu__course__opts__3__check__mark {
+.menu__course__opts__3__space:hover .menu__course__opts__3__space__check__mark {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.menu__course__opts__3:hover .menu__course__opts__3__check {
+.menu__course__opts__3__space:hover .menu__course__opts__3__space__check {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__3:hover .menu__course__opts__3__price {
+.menu__course__opts__3__space:hover .menu__course__opts__3__space__price {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__3:hover .menu__course__opts__3__plate {
+.menu__course__opts__3__space:hover .menu__course__opts__3__space__plate {
   width: 180px;
   position: relative;
   cursor: pointer;
@@ -960,6 +968,10 @@ p4 {
 }
 
 .menu__course__opts__4 {
+  padding: 5px;
+}
+
+.menu__course__opts__4__space {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 40px 60px;
@@ -981,7 +993,7 @@ p4 {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.menu__course__opts__4__plate {
+.menu__course__opts__4__space__plate {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20px 15px;
@@ -993,7 +1005,7 @@ p4 {
   transition: width 1000ms ease-in-out;
 }
 
-.menu__course__opts__4__price {
+.menu__course__opts__4__space__price {
   width: 40px;
   text-align: center;
   right: 0;
@@ -1002,7 +1014,7 @@ p4 {
   transition: right 1000ms ease-in-out;
 }
 
-.menu__course__opts__4__check {
+.menu__course__opts__4__space__check {
   position: relative;
   height: 50px;
   width: 60px;
@@ -1016,7 +1028,7 @@ p4 {
   overflow: hidden;
 }
 
-.menu__course__opts__4__check__mark {
+.menu__course__opts__4__space__check__mark {
   position: relative;
   top: 13px;
   text-align: center;
@@ -1032,23 +1044,23 @@ p4 {
   transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
-.menu__course__opts__4:hover .menu__course__opts__4__check__mark {
+.menu__course__opts__4__space:hover .menu__course__opts__4__space__check__mark {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.menu__course__opts__4:hover .menu__course__opts__4__check {
+.menu__course__opts__4__space:hover .menu__course__opts__4__space__check {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__4:hover .menu__course__opts__4__price {
+.menu__course__opts__4__space:hover .menu__course__opts__4__space__price {
   position: relative;
   right: 60px;
 }
 
-.menu__course__opts__4:hover .menu__course__opts__4__plate {
+.menu__course__opts__4__space:hover .menu__course__opts__4__space__plate {
   width: 180px;
   position: relative;
   cursor: pointer;
