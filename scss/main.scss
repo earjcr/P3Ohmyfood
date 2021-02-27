@@ -226,40 +226,48 @@ footer {
             flex-wrap: wrap;
             justify-content: center;
             justify-content: space-around;
-            grid-gap: 20px;
+            grid-gap: 1px; /*P3 20px*/
             padding: 15px;
             &__1 {
-                width: 250px;
-                height: 50px;
-                text-align: left;
-                font-size: .7em;
-                font-weight: 700;
-                border: none;
-                outline: none;
-                padding: 20px;
-                border-radius: 15px;
-                background-color: $backgroundcolor2;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-                &__a {
-                    padding: 3px 6px 3px 6px;
-                    color: white;
-                    background-color: $primary-color;
-                    border-radius: 10px;
-                    position: relative;
-                    right: 30px;
-                }
-                &__b {
-                    position: relative;
-                    right: 15px;
-                }
-                &:hover {
+                padding: 10px;
+                &__2 {
+                    width: 250px;
+                    height: 50px;
+                    text-align: left;
+                    font-size: .7em;
+                    font-weight: 700;
+                    border: none;
                     outline: none;
-                    background-color: mix($primary-color, white, 20%);
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    padding: 20px;
+                    border-radius: 15px;
+                    background-color: $backgroundcolor2;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    &__a {
+                        padding: 3px 6px 3px 6px;
+                        color: white;
+                        background-color: $primary-color;
+                        border-radius: 10px;
+                        position: relative;
+                        right: 30px;
+                    }
+                    &__b {
+                        position: relative;
+                        right: 15px;
+                    }
+                    &:hover {
+                        outline: none;
+                        background-color: mix($primary-color, white, 20%);
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+                    }
                 }
             }
         }
     }
+}
+.spacebub {
+    height: 1em;
+    width: 1em;
+    color: red;
 }
 p2 {
     font-size: 1.0em;

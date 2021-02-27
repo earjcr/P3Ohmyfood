@@ -363,11 +363,16 @@ footer {
           justify-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  grid-gap: 20px;
+  grid-gap: 1px;
+  /*P3 20px*/
   padding: 15px;
 }
 
 .navbox__method__steps__1 {
+  padding: 10px;
+}
+
+.navbox__method__steps__1__2 {
   width: 250px;
   height: 50px;
   text-align: left;
@@ -382,7 +387,7 @@ footer {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.navbox__method__steps__1__a {
+.navbox__method__steps__1__2__a {
   padding: 3px 6px 3px 6px;
   color: white;
   background-color: #9356DC;
@@ -391,16 +396,22 @@ footer {
   right: 30px;
 }
 
-.navbox__method__steps__1__b {
+.navbox__method__steps__1__2__b {
   position: relative;
   right: 15px;
 }
 
-.navbox__method__steps__1:hover {
+.navbox__method__steps__1__2:hover {
   outline: none;
   background-color: #e9ddf8;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.spacebub {
+  height: 1em;
+  width: 1em;
+  color: red;
 }
 
 p2 {
